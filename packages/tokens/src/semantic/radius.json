@@ -1,0 +1,13 @@
+{
+  "$description": "FLOW³ border radius tokens. Organic, φ-proportioned curves at every scale.",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-radius-none": { "value": "0px", "type": "dimension", "description": "No rounding" },
+  "flow-radius-xs": { "value": "2px", "type": "dimension", "description": "F(3) - Subtle rounding" },
+  "flow-radius-sm": { "value": "3px", "type": "dimension", "description": "F(4) - Inputs, chips" },
+  "flow-radius-md": { "value": "5px", "type": "dimension", "description": "F(5) - Cards, buttons" },
+  "flow-radius-lg": { "value": "8px", "type": "dimension", "description": "F(6) - Modals, panels" },
+  "flow-radius-xl": { "value": "13px", "type": "dimension", "description": "F(7) - Large containers" },
+  "flow-radius-2xl": { "value": "21px", "type": "dimension", "description": "F(8) - Feature sections" },
+  "flow-radius-pill": { "value": "9999px", "type": "dimension", "description": "∞ - Pills, tags" },
+  "flow-radius-round": { "value": "50%", "type": "dimension", "description": "Circle - Avatars" }
+}

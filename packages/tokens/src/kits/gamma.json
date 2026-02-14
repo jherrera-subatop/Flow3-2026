@@ -1,0 +1,6 @@
+{
+  "$description": "Kit γ (Gamma) - 233×377px Golden Rectangle. Auction cards, panels.",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-kit-gamma-width": { "value": "233px", "type": "dimension" },
+  "flow-kit-gamma-height": { "value": "377px", "type": "dimension" }
+}

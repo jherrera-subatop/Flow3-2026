@@ -1,0 +1,14 @@
+/* VMC Subastas — Brand colors only. Dimensions stay in FLOW³ tokens. */
+:root {
+  --vmc-bg-page: #181533;
+  --vmc-bg-sidebar: #120f2a;
+  --vmc-bg-main: #252042;
+  --vmc-bg-card: #312b54;
+  --vmc-text: #ffffff;
+  --vmc-text-muted: rgba(255, 255, 255, 0.7);
+  --vmc-accent-green: #5cf9c4;
+  --vmc-accent-blue: #5cf9c4;
+  --vmc-accent-yellow: #f5d547;
+  --vmc-btn-primary: #7d66d6;
+  --vmc-border: rgba(255, 255, 255, 0.1);
+}

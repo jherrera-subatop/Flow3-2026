@@ -1,0 +1,22 @@
+{
+  "$description": "FLOW³ primitive tokens - raw Fibonacci numbers. Named by INDEX, not value. F(1)=1, F(2)=1, F(3)=2...",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-fib-1": { "value": "1", "type": "number", "description": "Fibonacci F(1)" },
+  "flow-fib-2": { "value": "1", "type": "number", "description": "Fibonacci F(2)" },
+  "flow-fib-3": { "value": "2", "type": "number", "description": "Fibonacci F(3)" },
+  "flow-fib-4": { "value": "3", "type": "number", "description": "Fibonacci F(4)" },
+  "flow-fib-5": { "value": "5", "type": "number", "description": "Fibonacci F(5)" },
+  "flow-fib-6": { "value": "8", "type": "number", "description": "Fibonacci F(6)" },
+  "flow-fib-7": { "value": "13", "type": "number", "description": "Fibonacci F(7)" },
+  "flow-fib-8": { "value": "21", "type": "number", "description": "Fibonacci F(8)" },
+  "flow-fib-9": { "value": "34", "type": "number", "description": "Fibonacci F(9)" },
+  "flow-fib-10": { "value": "55", "type": "number", "description": "Fibonacci F(10)" },
+  "flow-fib-11": { "value": "89", "type": "number", "description": "Fibonacci F(11)" },
+  "flow-fib-12": { "value": "144", "type": "number", "description": "Fibonacci F(12)" },
+  "flow-fib-13": { "value": "233", "type": "number", "description": "Fibonacci F(13)" },
+  "flow-fib-14": { "value": "377", "type": "number", "description": "Fibonacci F(14)" },
+  "flow-fib-15": { "value": "610", "type": "number", "description": "Fibonacci F(15)" },
+  "flow-fib-16": { "value": "987", "type": "number", "description": "Fibonacci F(16)" },
+  "flow-fib-17": { "value": "1597", "type": "number", "description": "Fibonacci F(17)" },
+  "flow-fib-18": { "value": "2584", "type": "number", "description": "Fibonacci F(18)" }
+}

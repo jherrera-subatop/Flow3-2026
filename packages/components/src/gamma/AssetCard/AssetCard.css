@@ -1,0 +1,109 @@
+/* AssetCard — Kit γ.1 (233×377). FLOW-004: image 233 + body 144 */
+
+.assetCardWrap {
+  position: relative;
+  width: var(--flow-kit-gamma-width);
+  height: var(--flow-kit-gamma-height);
+}
+
+.assetCard {
+  width: var(--flow-kit-gamma-width);
+  height: var(--flow-kit-gamma-height);
+  border-radius: var(--flow-radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--flow-shadow-md);
+  transition: box-shadow var(--flow-duration-normal) var(--flow-ease-out);
+}
+
+.assetCard:hover {
+  box-shadow: var(--flow-shadow-lg);
+}
+
+.assetCardImage {
+  width: 100%;
+  height: var(--flow-kit-gamma-width);
+  min-height: var(--flow-kit-gamma-width);
+  object-fit: cover;
+  display: block;
+}
+
+.assetCardBody {
+  padding: var(--flow-space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-space-xs);
+  min-height: var(--flow-kit-delta-width);
+  flex: 1;
+}
+
+.assetCardTitle {
+  font-size: var(--flow-text-base);
+  font-weight: 700;
+  margin: 0;
+  line-height: var(--flow-leading-tight);
+}
+
+.assetCardMeta {
+  font-size: var(--flow-text-xs);
+  opacity: 0.85;
+}
+
+.assetCardOfferLabel {
+  font-size: var(--flow-text-xs);
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-top: auto;
+}
+
+.assetCardPrice {
+  font-size: var(--flow-text-lg);
+  font-weight: 700;
+  line-height: var(--flow-leading-tight);
+}
+
+.assetCardAction {
+  position: absolute;
+  bottom: var(--flow-space-md);
+  right: var(--flow-space-md);
+  width: var(--flow-kit-delta-height);
+  height: var(--flow-kit-delta-height);
+  border-radius: var(--flow-radius-round);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--flow-duration-fast) var(--flow-ease-out);
+}
+
+@media (max-width: 987px) {
+  .assetCardWrap,
+  .assetCard {
+    width: var(--flow-kit-beta-width);
+    height: var(--flow-kit-beta-height);
+  }
+  .assetCardImage {
+    height: var(--flow-kit-beta-width);
+    min-height: var(--flow-kit-beta-width);
+  }
+  .assetCardBody {
+    min-height: var(--flow-kit-delta-width);
+  }
+}
+
+@media (max-width: 377px) {
+  .assetCardWrap,
+  .assetCard {
+    width: var(--flow-kit-delta-width);
+    height: var(--flow-kit-delta-height);
+  }
+  .assetCardImage {
+    height: var(--flow-kit-delta-width);
+    min-height: var(--flow-kit-delta-width);
+  }
+  .assetCardBody {
+    min-height: var(--flow-fib-8);
+  }
+}

@@ -1,0 +1,22 @@
+---
+alwaysApply: false
+description: When creating or editing FLOW³ design tokens
+---
+# FLOW³ Token Creation
+
+When creating or editing design tokens:
+
+1. **Determine tier**
+   - **Primitive**: raw Fibonacci number (e.g. 8, 13, 21) → `packages/tokens/src/primitives/fibonacci.json`
+   - **Semantic**: contextual (e.g. spacing, color role) → `packages/tokens/src/semantic/*.json`
+   - **Component**: UI-specific (e.g. button height) → `packages/tokens/src/` or component-level
+
+2. **Validate** the value is a Fibonacci number (1,1,2,3,5,8,13,21,34,55,89,144,233,377,610). Exception: 16px body text only.
+
+3. **Naming**: `--flow-[tier]-[category]-[variant]` e.g. `--flow-space-md`, `--flow-kit-alpha-width`.
+
+4. **Add to JSON** in the correct file. Use W3C-style: `"token-name": { "value": "8px", "type": "dimension", "description": "..." }`.
+
+5. **Rebuild CSS**: run `npm run build:tokens` from repo root. Output: `packages/tokens/dist/flow3-tokens.css`.
+
+Never add arbitrary pixel values. Only Fibonacci or references to existing tokens.

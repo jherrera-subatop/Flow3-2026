@@ -1,0 +1,23 @@
+@import '../../packages/tokens/dist/flow3-tokens.css';
+@import './theme-vmc.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: var(--flow-text-base);
+  line-height: var(--flow-leading-normal);
+  background: var(--vmc-bg-page);
+  color: var(--vmc-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+}

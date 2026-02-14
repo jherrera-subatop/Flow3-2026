@@ -1,0 +1,17 @@
+/* Navbar — ε.1 height (55px) */
+
+.navbar {
+  height: var(--flow-kit-epsilon-height);
+  padding: 0 var(--flow-space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: var(--flow-fib-3) solid var(--navbar-border, rgba(255,255,255,0.1));
+  box-sizing: border-box;
+}
+
+.navbarContent {
+  display: flex;
+  align-items: center;
+  gap: var(--flow-space-xl);
+}

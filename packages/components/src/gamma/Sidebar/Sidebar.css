@@ -1,0 +1,59 @@
+/* Sidebar — Kit γ width (233px) */
+
+.sidebar {
+  width: var(--flow-kit-gamma-width);
+  min-height: 100vh;
+  padding: var(--flow-space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-space-xl);
+}
+
+.sidebarLogo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-space-2xs);
+}
+
+.sidebarLogoTitle {
+  font-size: var(--flow-text-lg);
+  font-weight: 700;
+  line-height: var(--flow-leading-normal);
+}
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-space-xs);
+}
+
+.sidebarNavItem {
+  display: flex;
+  align-items: center;
+  gap: var(--flow-space-sm);
+  padding: var(--flow-space-sm) var(--flow-space-md);
+  border-radius: var(--flow-radius-md);
+  font-size: var(--flow-text-base);
+  line-height: var(--flow-leading-normal);
+  color: inherit;
+  text-decoration: none;
+  transition: background var(--flow-duration-fast) var(--flow-ease-out);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebarNavItem:hover {
+  background: var(--sidebar-item-hover, rgba(255,255,255,0.08));
+}
+
+.sidebarSectionLabel {
+  font-size: var(--flow-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  margin-top: var(--flow-space-lg);
+  margin-bottom: var(--flow-space-xs);
+}

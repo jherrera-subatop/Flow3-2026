@@ -1,0 +1,413 @@
+/* FLOW³ Design System — Docs page. All spacing/sizing from tokens. */
+
+.dsRoot {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.618fr 1fr;
+  gap: 0;
+  background: var(--ds-bg, #0f0e17);
+  color: var(--ds-text, #e8e6f0);
+}
+
+@media (max-width: 987px) {
+  .dsRoot {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dsSidebar {
+  padding: var(--flow-space-2xl) var(--flow-space-xl);
+  border-right: var(--flow-fib-3) solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 987px) {
+  .dsSidebar {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: var(--flow-fib-3) solid rgba(255,255,255,0.08);
+  }
+}
+
+.dsLogo {
+  font-size: var(--flow-text-xl);
+  font-weight: 700;
+  margin-bottom: var(--flow-space-2xs);
+  letter-spacing: 0.02em;
+}
+
+.dsLogoSub {
+  font-size: var(--flow-text-xs);
+  opacity: 0.7;
+  margin-bottom: var(--flow-space-2xl);
+}
+
+.dsNavTitle {
+  font-size: var(--flow-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  margin-bottom: var(--flow-space-sm);
+}
+
+.dsNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.dsNavLink {
+  display: block;
+  width: 100%;
+  padding: var(--flow-space-sm) var(--flow-space-md);
+  border-radius: var(--flow-radius-md);
+  color: inherit;
+  text-decoration: none;
+  font-size: var(--flow-text-sm);
+  margin-bottom: var(--flow-space-2xs);
+  transition: background var(--flow-duration-fast) var(--flow-ease-out);
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.dsNavCategory {
+  margin-bottom: var(--flow-space-md);
+}
+
+.dsNavCategoryTitle {
+  font-size: var(--flow-text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+  margin-bottom: var(--flow-space-xs);
+  padding-left: var(--flow-space-sm);
+}
+
+.dsNavLink:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.dsNavLinkActive {
+  background: rgba(255,255,255,0.1);
+  font-weight: 600;
+}
+
+.dsMain {
+  padding: var(--flow-space-2xl) var(--flow-space-xl);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dsSection {
+  margin-bottom: var(--flow-space-3xl);
+}
+
+.dsComponentHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--flow-space-md);
+  margin-bottom: var(--flow-space-lg);
+}
+
+.dsComponentName {
+  font-size: var(--flow-text-2xl);
+  font-weight: 700;
+  margin: 0;
+  line-height: var(--flow-leading-tight);
+}
+
+.dsKitBadge {
+  display: inline-block;
+  padding: var(--flow-space-2xs) var(--flow-space-sm);
+  border-radius: var(--flow-radius-sm);
+  font-size: var(--flow-text-xs);
+  font-weight: 700;
+  background: rgba(92, 249, 196, 0.2);
+  color: #5cf9c4;
+}
+
+.dsDimensions {
+  font-size: var(--flow-text-sm);
+  opacity: 0.8;
+}
+
+.dsSpecBlock {
+  margin-bottom: var(--flow-space-xl);
+}
+
+.dsSpecTitle {
+  font-size: var(--flow-text-base);
+  font-weight: 700;
+  margin: 0 0 var(--flow-space-sm);
+  color: var(--ds-text);
+}
+
+.dsSpecList {
+  margin: 0;
+  padding-left: var(--flow-space-lg);
+  font-size: var(--flow-text-sm);
+  line-height: var(--flow-leading-normal);
+  opacity: 0.9;
+}
+
+.dsSpecList li {
+  margin-bottom: var(--flow-space-xs);
+}
+
+.dsSpecParagraph {
+  font-size: var(--flow-text-sm);
+  line-height: var(--flow-leading-normal);
+  opacity: 0.9;
+  margin: 0 0 var(--flow-space-md);
+}
+
+.dsLiveDemo {
+  padding: var(--flow-space-xl);
+  border-radius: var(--flow-radius-lg);
+  background: rgba(255,255,255,0.04);
+  border: var(--flow-fib-3) solid rgba(255,255,255,0.08);
+  margin-bottom: var(--flow-space-lg);
+}
+
+.dsLiveDemoLabel {
+  font-size: var(--flow-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  margin-bottom: var(--flow-space-md);
+}
+
+.dsCodeBlock {
+  padding: var(--flow-space-md);
+  border-radius: var(--flow-radius-md);
+  background: #1a1825;
+  font-family: ui-monospace, monospace;
+  font-size: var(--flow-text-xs);
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 0 0 var(--flow-space-md);
+  border: var(--flow-fib-3) solid rgba(255,255,255,0.06);
+}
+
+.dsTableWrap {
+  overflow-x: auto;
+  margin-bottom: var(--flow-space-md);
+}
+
+.dsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--flow-text-sm);
+}
+
+.dsTable th,
+.dsTable td {
+  padding: var(--flow-space-sm) var(--flow-space-md);
+  text-align: left;
+  border-bottom: var(--flow-fib-3) solid rgba(255,255,255,0.08);
+}
+
+.dsTable th {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.dsTable td {
+  opacity: 0.85;
+}
+
+.dsTable code {
+  font-size: var(--flow-text-xs);
+  background: rgba(255,255,255,0.08);
+  padding: var(--flow-space-2xs) var(--flow-space-xs);
+  border-radius: var(--flow-radius-xs);
+}
+
+.dsBackLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--flow-space-sm);
+  color: #5cf9c4;
+  text-decoration: none;
+  font-size: var(--flow-text-sm);
+  margin-bottom: var(--flow-space-xl);
+  transition: opacity var(--flow-duration-fast) var(--flow-ease-out);
+}
+
+.dsBackLink:hover {
+  opacity: 0.9;
+}
+
+.dsIntro {
+  margin-bottom: var(--flow-space-3xl);
+  max-width: var(--flow-kit-alpha-width);
+}
+
+.dsIntro h1 {
+  font-size: var(--flow-text-3xl);
+  font-weight: 700;
+  margin: 0 0 var(--flow-space-md);
+  line-height: var(--flow-leading-tight);
+}
+
+.dsIntro p {
+  font-size: var(--flow-text-base);
+  line-height: var(--flow-leading-normal);
+  opacity: 0.9;
+  margin: 0 0 var(--flow-space-md);
+}
+
+/* ═══ Overview: grid de plantillas (tipo Storybook) ═══ */
+.dsOverview {
+  margin-bottom: var(--flow-space-3xl);
+}
+
+.dsOverviewTitle {
+  font-size: var(--flow-text-2xl);
+  font-weight: 700;
+  margin: 0 0 var(--flow-space-sm);
+  line-height: var(--flow-leading-tight);
+}
+
+.dsOverviewLead {
+  font-size: var(--flow-text-base);
+  opacity: 0.85;
+  margin: 0 0 var(--flow-space-2xl);
+  max-width: 40rem;
+}
+
+.dsOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--flow-space-xl);
+}
+
+.dsTemplateCard {
+  background: rgba(255,255,255,0.04);
+  border: var(--flow-fib-3) solid rgba(255,255,255,0.08);
+  border-radius: var(--flow-radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dsTemplateCardLabel {
+  font-size: var(--flow-text-sm);
+  font-weight: 700;
+  padding: var(--flow-space-md) var(--flow-space-lg);
+  border-bottom: var(--flow-fib-3) solid rgba(255,255,255,0.06);
+}
+
+.dsTemplateCardFrame {
+  flex: 1;
+  min-height: 200px;
+  padding: var(--flow-space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.dsTemplateCardFrame > * {
+  max-width: 100%;
+}
+
+.dsTemplateCardGo {
+  margin: var(--flow-space-md) var(--flow-space-lg) var(--flow-space-lg);
+  padding: var(--flow-space-sm) var(--flow-space-md);
+  font-size: var(--flow-text-sm);
+  color: #5cf9c4;
+  background: rgba(92, 249, 196, 0.1);
+  border: none;
+  border-radius: var(--flow-radius-md);
+  cursor: pointer;
+  transition: background var(--flow-duration-fast) var(--flow-ease-out);
+}
+
+.dsTemplateCardGo:hover {
+  background: rgba(92, 249, 196, 0.2);
+}
+
+/* ═══ Canvas: plantilla a tamaño real ═══ */
+.dsComponentView {
+  margin-bottom: var(--flow-space-3xl);
+}
+
+.dsCanvasWrap {
+  margin-bottom: var(--flow-space-xl);
+}
+
+.dsCanvasLabel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--flow-space-md);
+  margin-bottom: var(--flow-space-md);
+}
+
+.dsCanvasName {
+  font-size: var(--flow-text-lg);
+  font-weight: 700;
+}
+
+.dsCanvas {
+  padding: var(--flow-space-xl);
+  border-radius: var(--flow-radius-lg);
+  background: rgba(255,255,255,0.03);
+  border: var(--flow-fib-3) solid rgba(255,255,255,0.1);
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dsCanvas > * {
+  max-width: 100%;
+}
+
+.dsCanvasFallback {
+  padding: var(--flow-space-lg);
+  opacity: 0.8;
+  font-size: var(--flow-text-sm);
+}
+
+.dsCanvasFallback code {
+  background: rgba(255,255,255,0.1);
+  padding: var(--flow-space-2xs) var(--flow-space-xs);
+  border-radius: var(--flow-radius-xs);
+}
+
+/* Documentación colapsable */
+.dsDocsSection {
+  border-top: var(--flow-fib-3) solid rgba(255,255,255,0.08);
+  padding-top: var(--flow-space-lg);
+}
+
+.dsDocsToggle {
+  width: 100%;
+  padding: var(--flow-space-md) 0;
+  font-size: var(--flow-text-base);
+  font-weight: 600;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: var(--flow-space-sm);
+  transition: opacity var(--flow-duration-fast) var(--flow-ease-out);
+}
+
+.dsDocsToggle:hover {
+  opacity: 0.9;
+}

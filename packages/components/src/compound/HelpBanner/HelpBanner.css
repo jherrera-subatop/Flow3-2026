@@ -1,0 +1,59 @@
+/* HelpBanner — φ-split 1fr 1.618fr, icon δ */
+
+.helpBanner {
+  padding: var(--flow-space-xl);
+  border-radius: var(--flow-radius-lg);
+  display: grid;
+  grid-template-columns: 1fr 1.618fr;
+  gap: var(--flow-space-xl);
+  align-items: center;
+}
+
+.helpBannerIcon {
+  width: var(--flow-kit-delta-width);
+  height: var(--flow-kit-delta-height);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--flow-text-2xl);
+}
+
+.helpBannerTitle {
+  font-size: var(--flow-text-lg);
+  font-weight: 700;
+  margin: 0 0 var(--flow-space-xs);
+  line-height: var(--flow-leading-normal);
+}
+
+.helpBannerDescription {
+  font-size: var(--flow-text-sm);
+  margin: 0 0 var(--flow-space-md);
+  max-width: var(--flow-kit-alpha-width);
+  line-height: var(--flow-leading-normal);
+  opacity: 0.85;
+}
+
+.helpBannerCta {
+  height: var(--flow-kit-epsilon-height);
+  padding: 0 var(--flow-space-lg);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--flow-space-sm);
+  border-radius: var(--flow-radius-md);
+  font-size: var(--flow-text-base);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--flow-duration-fast) var(--flow-ease-out);
+}
+
+.helpBannerCta:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 610px) {
+  .helpBanner {
+    grid-template-columns: 1fr;
+  }
+}

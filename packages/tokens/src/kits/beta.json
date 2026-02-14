@@ -1,0 +1,6 @@
+{
+  "$description": "Kit β (Beta) - 377×377px Square. Profile cards, thumbnails.",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-kit-beta-width": { "value": "377px", "type": "dimension" },
+  "flow-kit-beta-height": { "value": "377px", "type": "dimension" }
+}

@@ -1,0 +1,48 @@
+/* Button — Kit ε.1 (55px) / ε.2 (34px) */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--flow-space-sm);
+  padding: 0 var(--flow-space-lg);
+  border-radius: var(--flow-radius-md);
+  font-size: var(--flow-text-base);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--flow-duration-fast) var(--flow-ease-out);
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnLg {
+  height: var(--flow-kit-epsilon-height);
+}
+
+.btnMd {
+  height: var(--flow-fib-9);
+  padding: 0 var(--flow-space-md);
+  font-size: var(--flow-text-sm);
+}
+
+.btnPrimary {
+  /* Consumer or theme sets bg/color */
+}
+
+.btnSecondary {
+  /* Consumer or theme sets bg/color */
+}
+
+.btnGhost {
+  background: transparent;
+}

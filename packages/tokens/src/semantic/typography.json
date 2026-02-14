@@ -1,0 +1,14 @@
+{
+  "$description": "FLOW³ typography tokens. Font sizes follow Fibonacci with one exception: 16px body text (browser default, WCAG).",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-text-xs": { "value": "8px", "type": "dimension", "description": "F(6) - Micro labels" },
+  "flow-text-sm": { "value": "13px", "type": "dimension", "description": "F(7) - Captions, metadata" },
+  "flow-text-base": { "value": "16px", "type": "dimension", "description": "≈F(7)×φ² - Body (only exception)" },
+  "flow-text-lg": { "value": "21px", "type": "dimension", "description": "F(8) - Subheadings" },
+  "flow-text-xl": { "value": "34px", "type": "dimension", "description": "F(9) - Section headers" },
+  "flow-text-2xl": { "value": "55px", "type": "dimension", "description": "F(10) - Page titles" },
+  "flow-text-3xl": { "value": "89px", "type": "dimension", "description": "F(11) - Hero display" },
+  "flow-leading-tight": { "value": "1.2", "type": "number", "description": "Tight line height" },
+  "flow-leading-normal": { "value": "1.618", "type": "number", "description": "φ itself" },
+  "flow-leading-relaxed": { "value": "2.058", "type": "number", "description": "φ × 1.272 (√φ)" }
+}

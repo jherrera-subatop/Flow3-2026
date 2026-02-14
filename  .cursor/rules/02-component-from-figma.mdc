@@ -1,0 +1,25 @@
+---
+alwaysApply: false
+description: When building components from Figma designs
+---
+# FLOW³ Component from Figma
+
+When creating a component from Figma:
+
+1. **Analyze** the Figma component (use Figma MCP if available): measure dimensions, spacing, typography.
+
+2. **Assign Kit**: Hero/large rectangle → α (610×377). Square medium → β (377×377). Card/panel → γ (233×377). Icon/button/avatar → δ (144×144). Badge/tag → ε (89×55).
+
+3. **Map to tokens**: Replace every measure with a FLOW³ token. Use `var(--flow-space-*)` for spacing, `var(--flow-kit-*-width|height)` for size. No raw px except 16px body text.
+
+4. **Generate** in `packages/components/src/[kit]/`:
+   - React component
+   - TypeScript types
+   - Tests (target >80% coverage)
+   - Storybook story
+
+5. **Document** Kit.Set.PHI (e.g. γ.1.PHI3) in the component file or Storybook.
+
+6. **Validate**: `npm run lint:flow3` and accessibility (WCAG 2.1 AA).
+
+If the design uses non-Fibonacci values, adapt to the nearest Fibonacci/Kit size and document the decision.

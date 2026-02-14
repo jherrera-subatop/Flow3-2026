@@ -1,0 +1,21 @@
+{
+  "name": "flow3-2026",
+  "version": "0.1.0",
+  "description": "FLOW³ Design System - Golden Ratio & Fibonacci based",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jherrera-subatop/Flow3-2026.git"
+  },
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:tokens": "npm run build -w packages/tokens",
+    "lint:flow3": "echo 'FLOW³ compliance linter - add script when packages/lint exists'"
+  },
+  "workspaces": [
+    "packages/tokens",
+    "packages/components",
+    "packages/lint",
+    "app"
+  ]
+}

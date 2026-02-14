@@ -1,0 +1,97 @@
+{
+  "$schema": "https://flow3.subastop.com/schema/v1",
+  "$description": "FLOW³ Compound Catalog - Reusable UI components for Subascars/VMC Subastas",
+  "compounds": [
+    {
+      "id": "auction-featured",
+      "name": "Auction Card — Featured",
+      "container_kit": "alpha",
+      "container_element": "α.1",
+      "dimensions": {"w": 610, "h": 377},
+      "constituent_elements": ["β.1", "ε.2", "ε.1", "δ.3", "ε.3"],
+      "layout": {"type": "vertical_phi_split"},
+      "spacing": {"padding": "space-lg", "gap": "space-md"},
+      "visual": {"radius": "radius-lg", "shadow": "shadow-lg"},
+      "priority": "high",
+      "usage_contexts": ["homepage-hero", "featured-listing"]
+    },
+    {
+      "id": "auction-grid",
+      "name": "Auction Card — Grid",
+      "container_kit": "gamma",
+      "container_element": "γ.1",
+      "dimensions": {"w": 233, "h": 377},
+      "constituent_elements": ["β.2", "ε.2", "ε.1", "ε.3", "δ.5"],
+      "layout": {"type": "vertical_phi_split"},
+      "spacing": {"padding": "space-sm", "gap": "space-xs"},
+      "visual": {"radius": "radius-md", "shadow": "shadow-md"},
+      "priority": "critical",
+      "usage_contexts": ["search-results", "category-browse", "homepage-grid", "related-vehicles"]
+    },
+    {
+      "id": "auction-compact",
+      "name": "Auction Card — Compact",
+      "container_kit": "delta",
+      "container_element": "δ.1",
+      "dimensions": {"w": 144, "h": 144},
+      "constituent_elements": ["β.5", "ε.3", "ε.5", "δ.8"],
+      "layout": {"type": "horizontal_phi_split"},
+      "spacing": {"padding": "space-xs", "gap": "space-xs"},
+      "visual": {"radius": "radius-md", "shadow": "shadow-sm"},
+      "priority": "low",
+      "usage_contexts": ["sidebar", "related-vehicles", "ending-soon"]
+    },
+    {
+      "id": "bid-panel",
+      "name": "Bid Panel",
+      "container_kit": "gamma",
+      "container_element": "γ.2",
+      "dimensions": {"w": 144, "h": 233},
+      "constituent_elements": ["ε.1", "ε.1", "ε.2", "δ.5"],
+      "layout": {"type": "vertical_stack"},
+      "spacing": {"padding": "space-md", "gap": "space-sm"},
+      "visual": {"radius": "radius-lg", "shadow": "shadow-xl"},
+      "priority": "critical",
+      "usage_contexts": ["auction-detail", "live-auction"]
+    },
+    {
+      "id": "countdown",
+      "name": "Countdown Timer",
+      "container_kit": "delta",
+      "container_element": "δ.1",
+      "dimensions": {"w": 144, "h": 144},
+      "constituent_elements": ["δ.3", "δ.3", "δ.3", "δ.3", "δ.8", "ε.3"],
+      "layout": {"type": "grid"},
+      "spacing": {"gap": "space-xs"},
+      "visual": {"radius": "radius-round", "background": "overlay"},
+      "priority": "high",
+      "usage_contexts": ["auction-detail", "live-auction", "ending-soon-overlay"]
+    },
+    {
+      "id": "price-ticker",
+      "name": "Price Ticker",
+      "container_kit": "epsilon",
+      "container_element": "ε.1",
+      "dimensions": {"w": 89, "h": 55},
+      "constituent_elements": ["ε.3", "ε.2", "δ.8"],
+      "layout": {"type": "horizontal_stack"},
+      "spacing": {"padding": "space-sm", "gap": "space-xs"},
+      "visual": {"radius": "radius-sm"},
+      "priority": "critical",
+      "usage_contexts": ["auction-card", "bid-panel", "bid-history", "price-display"]
+    },
+    {
+      "id": "navbar",
+      "name": "Navigation Bar",
+      "container_kit": "epsilon",
+      "container_element": "ε.1:height",
+      "dimensions": {"w": "viewport", "h": 55},
+      "constituent_elements": ["β.8", "ε.2", "δ.3", "β.5"],
+      "layout": {"type": "horizontal_justified"},
+      "spacing": {"padding_x": "space-lg", "gap": "space-xl"},
+      "visual": {"shadow": "shadow-sm"},
+      "priority": "critical",
+      "usage_contexts": ["global-header"]
+    }
+  ]
+}

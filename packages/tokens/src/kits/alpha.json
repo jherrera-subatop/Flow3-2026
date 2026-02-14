@@ -1,0 +1,6 @@
+{
+  "$description": "Kit α (Alpha) - 610×377px Golden Rectangle. Hero components.",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-kit-alpha-width": { "value": "610px", "type": "dimension" },
+  "flow-kit-alpha-height": { "value": "377px", "type": "dimension" }
+}

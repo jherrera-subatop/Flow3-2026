@@ -1,0 +1,6 @@
+{
+  "$description": "Kit δ (Delta) - 144×144px Square. Icons, avatars, buttons.",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-kit-delta-width": { "value": "144px", "type": "dimension" },
+  "flow-kit-delta-height": { "value": "144px", "type": "dimension" }
+}

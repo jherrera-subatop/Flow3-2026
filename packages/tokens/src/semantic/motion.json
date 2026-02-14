@@ -1,0 +1,13 @@
+{
+  "$description": "FLOW³ motion tokens. Duration follows Fibonacci (in ms). Easing uses φ-derived bezier curves.",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-duration-instant": { "value": "89ms", "type": "duration", "description": "F(11) scaled to ms" },
+  "flow-duration-fast": { "value": "144ms", "type": "duration", "description": "F(12)" },
+  "flow-duration-normal": { "value": "233ms", "type": "duration", "description": "F(13)" },
+  "flow-duration-slow": { "value": "377ms", "type": "duration", "description": "F(14)" },
+  "flow-duration-slower": { "value": "610ms", "type": "duration", "description": "F(15)" },
+  "flow-ease-in": { "value": "cubic-bezier(0.618, 0, 1, 1)", "type": "cubicBezier", "description": "φ-derived ease in" },
+  "flow-ease-out": { "value": "cubic-bezier(0, 0, 0.382, 1)", "type": "cubicBezier", "description": "φ-derived ease out" },
+  "flow-ease-in-out": { "value": "cubic-bezier(0.618, 0, 0.382, 1)", "type": "cubicBezier", "description": "φ-derived ease in-out" },
+  "flow-ease-organic": { "value": "cubic-bezier(0.25, 0.1, 0.25, 1.618)", "type": "cubicBezier", "description": "Organic golden spiral" }
+}

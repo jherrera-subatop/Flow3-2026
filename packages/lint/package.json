@@ -1,0 +1,9 @@
+{
+  "name": "@flow3/lint",
+  "version": "0.1.0",
+  "description": "FLOW³ compliance linter - non-Fibonacci values, token usage, naming",
+  "private": true,
+  "scripts": {
+    "lint:flow3": "echo 'Compliance validator - to be implemented'"
+  }
+}

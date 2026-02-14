@@ -1,0 +1,44 @@
+REPOSITORIO: https://github.com/jherrera-subatop/Flow3-2026.git
+(Es público, no pide contraseña.)
+
+═══════════════════════════════════════════════════════════════
+RUTA PARA CONFIGURAR TODO Y EMPEZAR A TRABAJAR
+═══════════════════════════════════════════════════════════════
+
+PASO 1 — Clonar el repo (solo una vez)
+──────────────────────────────────────
+Abre Terminal y ejecuta:
+
+  cd /Users/usuario
+  git clone https://github.com/jherrera-subatop/Flow3-2026.git
+
+Se creará la carpeta:  /Users/usuario/Flow3-2026
+
+
+PASO 2 — Abrir el proyecto en Cursor
+──────────────────────────────────────
+• En Cursor:  File → Open Folder
+• Elige la carpeta:  Flow3-2026
+• Ruta completa:  /Users/usuario/Flow3-2026
+
+A partir de aquí todo lo que hagas (archivos, código) es tu proyecto.
+
+
+PASO 3 — Subir cambios a GitHub cuando quieras
+──────────────────────────────────────
+En Terminal (o en la terminal de Cursor):
+
+  cd /Users/usuario/Flow3-2026
+  git add .
+  git commit -m "Descripción de lo que cambiaste"
+  git push origin main
+
+(O pídeme "deploy" o "sube los cambios" y te guío.)
+
+
+═══════════════════════════════════════════════════════════════
+RESUMEN DE RUTAS
+═══════════════════════════════════════════════════════════════
+
+• Carpeta del proyecto en tu Mac:  /Users/usuario/Flow3-2026
+• Repo en GitHub:                  https://github.com/jherrera-subatop/Flow3-2026

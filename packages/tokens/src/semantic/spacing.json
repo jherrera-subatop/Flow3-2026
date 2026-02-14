@@ -1,0 +1,14 @@
+{
+  "$description": "FLOW³ semantic spacing tokens. Use these exclusively for spacing (no raw pixels).",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-space-3xs": { "value": "2px", "type": "dimension", "description": "F(3) - Hairline gaps" },
+  "flow-space-2xs": { "value": "3px", "type": "dimension", "description": "F(4) - Icon internal padding" },
+  "flow-space-xs": { "value": "5px", "type": "dimension", "description": "F(5) - Tight element spacing" },
+  "flow-space-sm": { "value": "8px", "type": "dimension", "description": "F(6) - Compact padding" },
+  "flow-space-md": { "value": "13px", "type": "dimension", "description": "F(7) - Default padding" },
+  "flow-space-lg": { "value": "21px", "type": "dimension", "description": "F(8) - Section padding" },
+  "flow-space-xl": { "value": "34px", "type": "dimension", "description": "F(9) - Component gaps" },
+  "flow-space-2xl": { "value": "55px", "type": "dimension", "description": "F(10) - Section margins" },
+  "flow-space-3xl": { "value": "89px", "type": "dimension", "description": "F(11) - Page-level spacing" },
+  "flow-space-4xl": { "value": "144px", "type": "dimension", "description": "F(12) - Major layout spacing" }
+}

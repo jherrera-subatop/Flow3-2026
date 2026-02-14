@@ -1,0 +1,24 @@
+---
+alwaysApply: false
+description: When validating FLOW³ compliance (lint, review, PR)
+---
+# FLOW³ Compliance Validator
+
+When checking compliance:
+
+**Scan for:**
+- Non-Fibonacci pixel values (e.g. `10px`, `24px`) except 16px body text.
+- Raw numbers in CSS/JS for layout (width, height, margin, padding) instead of `var(--flow-*)`.
+- Wrong naming: tokens or variables that don’t follow `--flow-[tier]-[category]-[variant]`.
+- Components not assigned to a Kit or using the wrong Kit size.
+
+**Report:**
+- File and line (or component name).
+- Current value and suggested Fibonacci/token replacement (e.g. `24px` → `--flow-space-lg: 21px` or `--flow-primitive-size-f8: 34px`).
+
+**Allowed:**
+- Fibonacci: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610.
+- 16px for body text only.
+- Token references: `var(--flow-*)`.
+
+The linter script `npm run lint:flow3` should eventually automate this (packages/lint). Until then, apply these rules manually or via code review.

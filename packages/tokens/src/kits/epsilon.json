@@ -1,0 +1,6 @@
+{
+  "$description": "Kit ε (Epsilon) - 89×55px Golden Rectangle. Badges, tags, micro UI.",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-kit-epsilon-width": { "value": "89px", "type": "dimension" },
+  "flow-kit-epsilon-height": { "value": "55px", "type": "dimension" }
+}

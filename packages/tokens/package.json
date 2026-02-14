@@ -1,0 +1,14 @@
+{
+  "name": "@flow3/tokens",
+  "version": "0.1.0",
+  "description": "FLOW³ design tokens - Fibonacci primitives, semantic spacing, Kit dimensions",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}

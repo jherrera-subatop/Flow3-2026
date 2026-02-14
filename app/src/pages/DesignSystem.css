@@ -315,6 +315,7 @@
   align-items: center;
   justify-content: center;
   overflow: auto;
+  background: #fff;
 }
 
 .dsTemplateCardFrame > * {
@@ -362,8 +363,8 @@
 .dsCanvas {
   padding: var(--flow-space-xl);
   border-radius: var(--flow-radius-lg);
-  background: rgba(255,255,255,0.03);
-  border: var(--flow-fib-3) solid rgba(255,255,255,0.1);
+  background: #fff;
+  border: var(--flow-fib-3) solid rgba(0,0,0,0.08);
   min-height: 160px;
   display: flex;
   align-items: center;
@@ -376,14 +377,15 @@
 
 .dsCanvasFallback {
   padding: var(--flow-space-lg);
-  opacity: 0.8;
   font-size: var(--flow-text-sm);
+  color: #333;
 }
 
 .dsCanvasFallback code {
-  background: rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.08);
   padding: var(--flow-space-2xs) var(--flow-space-xs);
   border-radius: var(--flow-radius-xs);
+  color: #111;
 }
 
 /* Documentación colapsable */
@@ -410,4 +412,122 @@
 
 .dsDocsToggle:hover {
   opacity: 0.9;
+}
+
+/* ═══ Sombras: Shadow Physics Engine ═══ */
+.dsShadows {
+  margin-bottom: var(--flow-space-3xl);
+}
+
+.dsShadowsTitle {
+  font-size: var(--flow-text-2xl);
+  font-weight: 700;
+  margin: 0 0 var(--flow-space-sm);
+  line-height: var(--flow-leading-tight);
+}
+
+.dsShadowsLead {
+  font-size: var(--flow-text-base);
+  opacity: 0.88;
+  margin: 0 0 var(--flow-space-2xl);
+  max-width: 42rem;
+}
+
+.dsShadowsLead code {
+  font-size: var(--flow-text-sm);
+  background: rgba(255,255,255,0.08);
+  padding: var(--flow-space-2xs) var(--flow-space-xs);
+  border-radius: var(--flow-radius-xs);
+}
+
+.dsShadowsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--flow-space-2xl);
+  margin-bottom: var(--flow-space-2xl);
+}
+
+.dsShadowCardWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--flow-space-md);
+}
+
+.dsShadowCard {
+  width: 100%;
+  min-height: 120px;
+  max-width: 233px;
+  border-radius: var(--flow-radius-lg);
+  background: rgba(255,255,255,0.06);
+  border: var(--flow-fib-3) solid rgba(255,255,255,0.06);
+  padding: var(--flow-space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--flow-space-xs);
+}
+
+.dsShadowCardLabel {
+  font-size: var(--flow-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.dsShadowCardToken {
+  font-size: var(--flow-text-xs);
+  font-family: ui-monospace, monospace;
+  opacity: 0.7;
+  margin: 0;
+  word-break: break-all;
+  text-align: center;
+}
+
+.dsShadowMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--flow-space-2xs);
+  font-size: var(--flow-text-sm);
+}
+
+.dsShadowMeta strong {
+  font-weight: 700;
+}
+
+.dsShadowLayers {
+  font-size: var(--flow-text-xs);
+  opacity: 0.75;
+}
+
+.dsShadowsSub {
+  font-size: var(--flow-text-sm);
+  font-weight: 600;
+  margin: 0 0 var(--flow-space-md);
+  opacity: 0.9;
+}
+
+.dsShadowsGridLight {
+  background: #e8e6f0;
+  color: #181533;
+  padding: var(--flow-space-2xl);
+  border-radius: var(--flow-radius-lg);
+  margin-bottom: var(--flow-space-xl);
+}
+
+.dsShadowCardLight {
+  background: #fff;
+  border-color: rgba(0,0,0,0.06);
+}
+
+.dsShadowsGridLight .dsShadowCardToken {
+  opacity: 0.6;
+}
+
+.dsShadowsCode {
+  margin-top: var(--flow-space-xl);
+  padding-top: var(--flow-space-xl);
+  border-top: var(--flow-fib-3) solid rgba(255,255,255,0.08);
 }

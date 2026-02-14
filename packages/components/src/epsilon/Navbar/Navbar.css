@@ -1,4 +1,4 @@
-/* Navbar — ε.1 height (55px) */
+/* Navbar — ε.1 height (55px). Elevación: shadow-sm (chrome elevado tipo Linear). */
 
 .navbar {
   height: var(--flow-kit-epsilon-height);
@@ -6,7 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border-bottom: var(--flow-fib-3) solid var(--navbar-border, rgba(255,255,255,0.1));
+  border-bottom: 1px solid var(--navbar-border, var(--flow-border-elevated, rgba(0,0,0,0.06)));
+  box-shadow: var(--flow-shadow-sm);
   box-sizing: border-box;
 }
 

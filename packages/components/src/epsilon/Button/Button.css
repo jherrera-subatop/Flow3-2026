@@ -1,4 +1,4 @@
-/* Button — Kit ε.1 (55px) / ε.2 (34px) */
+/* Button — Kit ε.1 (55px) / ε.2 (34px). Elevación: sm → md en hover (interpolación Linear). */
 
 .btn {
   display: inline-flex;
@@ -11,13 +11,17 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: opacity var(--flow-duration-fast) var(--flow-ease-out);
+  transition: opacity var(--flow-duration-fast) var(--flow-ease-out),
+    box-shadow var(--flow-duration-fast) var(--flow-ease-out);
   text-decoration: none;
   box-sizing: border-box;
+  box-shadow: var(--flow-shadow-sm);
+  border: 1px solid transparent;
 }
 
-.btn:hover:not(:disabled) {
+.btn:not(.btnGhost):hover:not(:disabled) {
   opacity: 0.9;
+  box-shadow: var(--flow-shadow-md);
 }
 
 .btn:disabled {
@@ -45,4 +49,11 @@
 
 .btnGhost {
   background: transparent;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.btnGhost:hover:not(:disabled) {
+  box-shadow: var(--flow-shadow-sm);
+  border-color: var(--flow-border-elevated, rgba(0,0,0,0.06));
 }

@@ -1,4 +1,4 @@
-/* FilterBar — ε.2 height (34px) chips */
+/* FilterBar — ε.2 height (34px) chips. Interpolación: sm (inactivo) → md (activo). */
 
 .filterBar {
   display: flex;
@@ -23,7 +23,13 @@
   padding: 0 var(--flow-space-md);
   border-radius: var(--flow-radius-md);
   font-size: var(--flow-text-sm);
-  border: none;
+  border: 1px solid var(--flow-border-elevated, rgba(0,0,0,0.06));
   cursor: pointer;
-  transition: background var(--flow-duration-fast) var(--flow-ease-out);
+  box-shadow: var(--flow-shadow-sm);
+  transition: background var(--flow-duration-fast) var(--flow-ease-out),
+    box-shadow var(--flow-duration-fast) var(--flow-ease-out);
+}
+
+.filterBarChipActive {
+  box-shadow: var(--flow-shadow-md);
 }

@@ -14,7 +14,9 @@
   display: flex;
   flex-direction: column;
   box-shadow: var(--flow-shadow-md);
-  transition: box-shadow var(--flow-duration-normal) var(--flow-ease-out);
+  border: 1px solid var(--flow-border-elevated, rgba(0,0,0,0.06));
+  transition: box-shadow var(--flow-duration-fast) var(--flow-ease-out),
+    border-color var(--flow-duration-fast) var(--flow-ease-out);
 }
 
 .assetCard:hover {

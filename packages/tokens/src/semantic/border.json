@@ -1,0 +1,9 @@
+{
+  "$description": "FLOW³ borders — hairline para elevación tipo Linear (definir borde sin ruido).",
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "flow-border-elevated": {
+    "value": "rgba(0,0,0,0.06)",
+    "type": "color",
+    "description": "Borde sutil 1px para superficies elevadas (light). En dark el tema puede override a rgba(255,255,255,0.08)."
+  }
+}

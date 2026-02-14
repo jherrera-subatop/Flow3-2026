@@ -1,0 +1,50 @@
+---
+description: Regla de Oro para sombras físicas (Shadow Physics Engine) en FLOW³
+alwaysApply: true
+---
+
+# Regla de Oro: Sombras Físicas (Shadow Physics Engine)
+
+Aplica esta regla **estricta** para todas las elevaciones y efectos de profundidad en FLOW³.
+
+## 1. Arquitectura de interpolación (estilo lineal)
+
+- **Prohibición:** No usar nunca `box-shadow` de una sola capa.
+- **Apilamiento:** Cada sombra debe tener **mínimo 5 a 6 capas** superpuestas para simular decaimiento de luz real.
+- **Modelo Umbra/Penumbra:**
+  - Primera capa: nítida y oscura (Umbra).
+  - Capas siguientes: aumento de desenfoque (blur) y disminución de opacidad de forma exponencial (Penumbra).
+
+## 2. Lógica matemática de decaimiento
+
+- **Offsets y blur:** Los valores de desplazamiento (y) y de desenfoque (blur) deben ser **números de Fibonacci consecutivos** (si y = F(n), blur = F(n+1)). Ej.: (1,2), (3,5), (8,13), (13,21), (21,34).
+- **Proporción áurea:** La relación de expansión entre capas debe tender a φ (1.618).
+- **Composición alfa:** Usar **solo** canal alfa sobre negro: `rgba(0, 0, 0, alpha)`. Así la sombra es neutra en modo claro, oscuro o colores de marca.
+
+## 3. Restricciones de implementación
+
+- **Tokens únicamente:** Las sombras solo se definen en tokens semánticos: `--flow-shadow-sm`, `--flow-shadow-md`, `--flow-shadow-lg` (y xl, 2xl si existen).
+- **Manifiesto:** Validar los valores contra `permitted_pixel_values` del manifiesto FLOW³ (solo Fibonacci).
+- **En código:** Usar siempre `var(--flow-shadow-sm)`, `var(--flow-shadow-md)`, `var(--flow-shadow-lg)` etc.; no definir sombras inline de una sola capa.
+
+## Estructura de ejemplo (flow-shadow-md)
+
+```css
+--flow-shadow-md:
+  0 1px 2px rgba(0,0,0,0.1),    /* Umbra: nítida */
+  0 3px 5px rgba(0,0,0,0.08),   /* Transición */
+  0 8px 13px rgba(0,0,0,0.06),  /* Penumbra */
+  0 13px 21px rgba(0,0,0,0.04),
+  0 21px 34px rgba(0,0,0,0.02); /* Fibonacci: 1,2,3,5,8,13,21,34 */
+```
+
+Los tokens actuales están en `packages/tokens/src/semantic/shadow.json` y se compilan a `packages/tokens/dist/flow3-tokens.css`.
+
+## 4. Interpolación tipo Linear (elevación por niveles + transición)
+
+Para que la jerarquía visual se sienta continua y predecible (como en Linear):
+
+- **Niveles de elevación:** Asignar un token por “nivel” de superficie: chrome/sidebar/navbar = `sm`; cards/banners = `md` en reposo; hero/cards hover = `lg`; modales = `xl`/`2xl`.
+- **Un paso por interacción:** En hover/focus, subir **un solo nivel** (ej. `sm` → `md`, `md` → `lg`). No saltar varios niveles.
+- **Transición ágil (tipo Linear):** Usar `transition: box-shadow var(--flow-duration-fast) var(--flow-ease-out);`. Bordes: `1px solid var(--flow-border-elevated)` en superficies elevadas.
+- **Consistencia:** Todos los componentes que tienen elevación deben usar estos tokens y esta lógica (sm/md/lg y transición). Ver implementación en `packages/components`: HeroFeatured, AssetCard, Sidebar, Button, Navbar, FilterBar, HelpBanner, Footer.

@@ -46,7 +46,7 @@ export function FilterBar({
             <button
               key={opt.id}
               type="button"
-              className="filterBarChip"
+              className={`filterBarChip ${isActive ? 'filterBarChipActive' : ''}`.trim()}
               style={style}
               onClick={() => onChange?.(opt.id)}
               aria-pressed={isActive}

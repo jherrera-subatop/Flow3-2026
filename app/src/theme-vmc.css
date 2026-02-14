@@ -11,4 +11,6 @@
   --vmc-accent-yellow: #f5d547;
   --vmc-btn-primary: #7d66d6;
   --vmc-border: rgba(255, 255, 255, 0.1);
+  /* Bordes elevados tipo Linear: visible sobre fondo oscuro */
+  --flow-border-elevated: rgba(255, 255, 255, 0.08);
 }

@@ -1,4 +1,4 @@
-/* Sidebar — Kit γ width (233px) */
+/* Sidebar — Kit γ width (233px). Elevación: shadow-sm (interpolación tipo Linear). */
 
 .sidebar {
   width: var(--flow-kit-gamma-width);
@@ -7,6 +7,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--flow-space-xl);
+  box-shadow: var(--flow-shadow-sm);
+  border-right: 1px solid var(--flow-border-elevated, rgba(0,0,0,0.06));
+  transition: box-shadow var(--flow-duration-fast) var(--flow-ease-out);
 }
 
 .sidebarLogo {

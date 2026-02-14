@@ -1,4 +1,4 @@
-/* HelpBanner — φ-split 1fr 1.618fr, icon δ */
+/* HelpBanner — φ-split 1fr 1.618fr, icon δ. Elevación: shadow-md. */
 
 .helpBanner {
   padding: var(--flow-space-xl);
@@ -7,6 +7,13 @@
   grid-template-columns: 1fr 1.618fr;
   gap: var(--flow-space-xl);
   align-items: center;
+  box-shadow: var(--flow-shadow-md);
+  border: 1px solid var(--flow-border-elevated, rgba(0,0,0,0.06));
+  transition: box-shadow var(--flow-duration-fast) var(--flow-ease-out);
+}
+
+.helpBanner:hover {
+  box-shadow: var(--flow-shadow-lg);
 }
 
 .helpBannerIcon {

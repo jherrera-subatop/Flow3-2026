@@ -11,6 +11,12 @@
   border-radius: var(--flow-radius-lg);
   overflow: hidden;
   box-shadow: var(--flow-shadow-lg);
+  border: 1px solid var(--flow-border-elevated, rgba(0,0,0,0.06));
+  transition: box-shadow var(--flow-duration-fast) var(--flow-ease-out);
+}
+
+.hero:hover {
+  box-shadow: var(--flow-shadow-xl);
 }
 
 .heroImage {

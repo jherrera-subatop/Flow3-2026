@@ -1,8 +1,10 @@
-/* Footer — φ columns 1.618fr 1fr 1fr auto, max-width F16 */
+/* Footer — φ columns 1.618fr 1fr 1fr auto, max-width F16. Elevación sutil: shadow-sm. */
 
 .footer {
   padding: var(--flow-space-2xl) var(--flow-space-xl);
   margin-top: auto;
+  box-shadow: var(--flow-shadow-sm);
+  border-top: 1px solid var(--flow-border-elevated, rgba(0,0,0,0.06));
 }
 
 .footerGrid {

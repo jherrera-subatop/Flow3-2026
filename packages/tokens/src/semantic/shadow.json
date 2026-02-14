@@ -1,9 +1,29 @@
 {
-  "$description": "FLOW³ elevation/shadow tokens. Shadow spread uses Fibonacci values.",
+  "$description": "FLOW³ Shadow Physics — Multi-layer Umbra/Penumbra, estilo Linear: muy suaves (alpha bajo), Fibonacci, rgba(0,0,0,alpha).",
   "$schema": "https://design-tokens.github.io/community-group/format/",
-  "flow-shadow-sm": { "value": "0 1px 2px 0 rgba(26, 26, 46, 0.05)", "type": "shadow", "description": "Small elevation" },
-  "flow-shadow-md": { "value": "0 3px 5px 0 rgba(26, 26, 46, 0.08)", "type": "shadow", "description": "Medium elevation" },
-  "flow-shadow-lg": { "value": "0 8px 13px 0 rgba(26, 26, 46, 0.10)", "type": "shadow", "description": "Large elevation" },
-  "flow-shadow-xl": { "value": "0 13px 21px -3px rgba(26, 26, 46, 0.12)", "type": "shadow", "description": "XL elevation" },
-  "flow-shadow-2xl": { "value": "0 21px 34px -5px rgba(26, 26, 46, 0.15)", "type": "shadow", "description": "2XL elevation" }
+  "flow-shadow-sm": {
+    "value": "0 1px 2px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.04), 0 3px 5px rgba(0,0,0,0.03), 0 5px 8px rgba(0,0,0,0.02), 0 8px 13px rgba(0,0,0,0.01)",
+    "type": "shadow",
+    "description": "Elevación sutil (chrome, chips). 5 capas, alpha bajo tipo Linear."
+  },
+  "flow-shadow-md": {
+    "value": "0 1px 2px rgba(0,0,0,0.06), 0 3px 5px rgba(0,0,0,0.04), 0 8px 13px rgba(0,0,0,0.03), 0 13px 21px rgba(0,0,0,0.02), 0 21px 34px rgba(0,0,0,0.01)",
+    "type": "shadow",
+    "description": "Elevación media (cards, panels). 5 capas, suave tipo Linear."
+  },
+  "flow-shadow-lg": {
+    "value": "0 2px 3px rgba(0,0,0,0.06), 0 5px 8px rgba(0,0,0,0.04), 0 8px 13px rgba(0,0,0,0.03), 0 13px 21px rgba(0,0,0,0.02), 0 21px 34px rgba(0,0,0,0.015), 0 34px 55px rgba(0,0,0,0.01)",
+    "type": "shadow",
+    "description": "Elevación alta (hero, cards hover). 6 capas, suave."
+  },
+  "flow-shadow-xl": {
+    "value": "0 3px 5px rgba(0,0,0,0.06), 0 8px 13px rgba(0,0,0,0.04), 0 13px 21px rgba(0,0,0,0.03), 0 21px 34px rgba(0,0,0,0.02), 0 34px 55px rgba(0,0,0,0.015), 0 55px 89px rgba(0,0,0,0.01)",
+    "type": "shadow",
+    "description": "Elevación XL (modales). 6 capas."
+  },
+  "flow-shadow-2xl": {
+    "value": "0 5px 8px rgba(0,0,0,0.06), 0 13px 21px rgba(0,0,0,0.04), 0 21px 34px rgba(0,0,0,0.03), 0 34px 55px rgba(0,0,0,0.02), 0 55px 89px rgba(0,0,0,0.015), 0 89px 144px rgba(0,0,0,0.01)",
+    "type": "shadow",
+    "description": "Elevación 2XL (overlays). 6 capas."
+  }
 }

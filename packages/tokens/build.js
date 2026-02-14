@@ -43,6 +43,7 @@ const spacing = require(path.join(SRC, 'semantic', 'spacing.json'));
 const typography = require(path.join(SRC, 'semantic', 'typography.json'));
 const radius = require(path.join(SRC, 'semantic', 'radius.json'));
 const shadow = require(path.join(SRC, 'semantic', 'shadow.json'));
+const border = require(path.join(SRC, 'semantic', 'border.json'));
 const motion = require(path.join(SRC, 'semantic', 'motion.json'));
 const kits = ['alpha', 'beta', 'gamma', 'delta', 'epsilon'].reduce((acc, name) => {
   const kit = require(path.join(SRC, 'kits', `${name}.json`));
@@ -54,6 +55,7 @@ const spaceFlat = flattenTokens(spacing);
 const typFlat = flattenTokens(typography);
 const radFlat = flattenTokens(radius);
 const shadFlat = flattenTokens(shadow);
+const borderFlat = flattenTokens(border);
 const motFlat = flattenTokens(motion);
 
 // Map primitive number values to px for CSS (e.g. flow-fib-5 -> 5px)
@@ -62,7 +64,7 @@ for (const [k, v] of Object.entries(primFlat)) {
   primCss[k] = typeof v === 'number' ? `${v}px` : v;
 }
 
-const allTokens = { ...primCss, ...spaceFlat, ...typFlat, ...radFlat, ...shadFlat, ...motFlat, ...kits };
+const allTokens = { ...primCss, ...spaceFlat, ...typFlat, ...radFlat, ...shadFlat, ...borderFlat, ...motFlat, ...kits };
 
 if (!fs.existsSync(DIST)) fs.mkdirSync(DIST, { recursive: true });
 const css = jsonToCss(allTokens);

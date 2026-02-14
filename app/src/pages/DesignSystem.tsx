@@ -33,7 +33,7 @@ function NavButton({
 export default function DesignSystem() {
   const [selectedId, setSelectedId] = useState<string>(() => {
     const hash = window.location.hash.slice(1);
-    if (hash === 'overview' || hash === 'intro') return hash;
+    if (hash === 'overview' || hash === 'intro' || hash === 'shadows') return hash;
     return hash && specContent[hash] ? hash : 'overview';
   });
   const [docsOpen, setDocsOpen] = useState(false);
@@ -41,7 +41,7 @@ export default function DesignSystem() {
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.slice(1);
-      if (hash === 'overview' || hash === 'intro') setSelectedId(hash);
+      if (hash === 'overview' || hash === 'intro' || hash === 'shadows') setSelectedId(hash);
       else if (hash && specContent[hash]) setSelectedId(hash);
       else if (!hash) setSelectedId('overview');
     };
@@ -67,6 +67,9 @@ export default function DesignSystem() {
           </NavButton>
           <NavButton active={selectedId === 'intro'} onClick={() => setSelectedId('intro')}>
             Introducción
+          </NavButton>
+          <NavButton active={selectedId === 'shadows'} onClick={() => setSelectedId('shadows')}>
+            🌑 Sombras (Shadow Physics)
           </NavButton>
           <div className="dsNavTitle" style={{ marginTop: 'var(--flow-space-lg)' }}>
             Por Kit
@@ -134,6 +137,65 @@ export default function DesignSystem() {
             <p>
               Usa <strong>Todas las plantillas</strong> para ver el catálogo completo, o elige un componente en el menú para verlo a tamaño real y su documentación.
             </p>
+          </div>
+        )}
+
+        {/* Sombras: Shadow Physics Engine */}
+        {selectedId === 'shadows' && (
+          <div className="dsShadows">
+            <h1 className="dsShadowsTitle">Sombras (Shadow Physics Engine)</h1>
+            <p className="dsShadowsLead">
+              Cada elevación usa 5–6 capas (Umbra → Penumbra), pares Fibonacci para offset y blur, y <code>rgba(0,0,0,alpha)</code> para neutralidad en cualquier fondo. La <strong>interpolación tipo Linear</strong> está aplicada en todos los componentes: un nivel de sombra en reposo (sm/md/lg) y un paso más en hover, con transición suave de <code>box-shadow</code>.
+            </p>
+            <div className="dsShadowsGrid">
+              {[
+                { id: 'sm', token: '--flow-shadow-sm', label: 'Small', layers: '5 capas · (1,2)…(8,13)' },
+                { id: 'md', token: '--flow-shadow-md', label: 'Medium', layers: '5 capas · (1,2)…(21,34)' },
+                { id: 'lg', token: '--flow-shadow-lg', label: 'Large', layers: '6 capas · (2,3)…(34,55)' },
+                { id: 'xl', token: '--flow-shadow-xl', label: 'XL', layers: '6 capas · (3,5)…(55,89)' },
+                { id: '2xl', token: '--flow-shadow-2xl', label: '2XL', layers: '6 capas · (5,8)…(89,144)' },
+              ].map((s) => (
+                <div key={s.id} className="dsShadowCardWrap">
+                  <div
+                    className="dsShadowCard"
+                    style={{ boxShadow: `var(${s.token})` }}
+                  >
+                    <span className="dsShadowCardLabel">Card</span>
+                    <p className="dsShadowCardToken">{s.token}</p>
+                  </div>
+                  <div className="dsShadowMeta">
+                    <strong>{s.label}</strong>
+                    <span className="dsShadowLayers">{s.layers}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="dsShadowsSub">Mismo set sobre fondo claro (rgba(0,0,0,alpha) es neutro):</p>
+            <div className="dsShadowsGrid dsShadowsGridLight">
+              {[
+                { id: 'sm-l', token: '--flow-shadow-sm' },
+                { id: 'md-l', token: '--flow-shadow-md' },
+                { id: 'lg-l', token: '--flow-shadow-lg' },
+                { id: 'xl-l', token: '--flow-shadow-xl' },
+                { id: '2xl-l', token: '--flow-shadow-2xl' },
+              ].map((s) => (
+                <div key={s.id} className="dsShadowCardWrap">
+                  <div
+                    className="dsShadowCard dsShadowCardLight"
+                    style={{ boxShadow: `var(${s.token})` }}
+                  >
+                    <span className="dsShadowCardLabel">Card</span>
+                    <p className="dsShadowCardToken">{s.token}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="dsShadowsCode">
+              <h3 className="dsSpecTitle">Uso en CSS</h3>
+              <pre className="dsCodeBlock">{`.elevation-sm { box-shadow: var(--flow-shadow-sm); }
+.elevation-md { box-shadow: var(--flow-shadow-md); }
+.elevation-lg { box-shadow: var(--flow-shadow-lg); }`}</pre>
+            </div>
           </div>
         )}
 

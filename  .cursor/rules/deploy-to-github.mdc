@@ -1,0 +1,31 @@
+---
+description: Subir y desplegar cambios al repositorio GitHub Flow3-2026
+alwaysApply: true
+---
+
+# Deploy to GitHub (Flow3-2026)
+
+Repositorio: **https://github.com/jherrera-subatop/Flow3-2026.git**
+
+## Cuando el usuario diga "sube a github", "subir a github", "deploy", "push a github", "publicar en github" o similar
+
+1. **Ejecutar el flujo de deploy** (hacerlo tú en el terminal, no solo sugerir):
+   - `git add .`
+   - `git status`
+   - `git commit -m "Descripción clara del cambio"` (en español o inglés según el usuario)
+   - `git push origin main`
+
+2. **Rama**: Usar `main`; solo usar `master` si es la rama por defecto del proyecto.
+
+3. **Si el repo no está conectado**: Desde la raíz del proyecto:
+   - `git remote add origin https://github.com/jherrera-subatop/Flow3-2026.git`
+   - `git branch -M main`
+   - `git push -u origin main`
+
+4. **Mensajes de commit**: Cortos y descriptivos, en el idioma del usuario.
+
+5. **No cambiar de repositorio** salvo que el usuario pida explícitamente otro destino.
+
+## Nota sobre contraseña
+
+Si `git push` pide usuario/contraseña y falla en el terminal, el usuario debe hacer una **configuración única** (token o SSH) para que el push funcione sin escribir contraseña. Ver `COMO-CONECTARSE-AL-PROYECTO.md` sección "Subir cambios (push) sin contraseña".

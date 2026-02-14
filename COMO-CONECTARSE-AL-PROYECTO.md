@@ -127,6 +127,38 @@ Listo: el proyecto está abierto en Cursor y conectado a GitHub.
 
 ---
 
+## Subir cambios (push) sin escribir contraseña
+
+Si al hacer **git push** te pide usuario y contraseña y en el terminal no te deja escribir (o no quieres poner la contraseña cada vez), haz **una sola vez** una de estas dos opciones.
+
+### Opción 1: Token de GitHub (recomendado)
+
+1. En GitHub: **Settings** (tu foto) → **Developer settings** → **Personal access tokens** → **Tokens (classic)** → **Generate new token**.  
+2. Ponle un nombre (ej. "Cursor Flow3"), marca el permiso **repo** y genera el token.  
+3. **Copia el token** (solo se muestra una vez).  
+4. En tu Mac, en la terminal (fuera de Cursor), ejecuta una sola vez:
+   ```bash
+   git config --global credential.helper osxkeychain
+   ```
+   La próxima vez que hagas `git push`, te pedirá **usuario** (tu usuario de GitHub) y **contraseña**: ahí **pega el token** en lugar de la contraseña. El Mac lo guardará en el llavero y no tendrás que volver a ponerlo.
+
+### Opción 2: SSH
+
+1. Generar una llave SSH (en terminal):  
+   `ssh-keygen -t ed25519 -C "tu@email.com"`  
+   (Enter para aceptar la ruta; puedes dejar la passphrase vacía.)  
+2. Ver la llave pública:  
+   `cat ~/.ssh/id_ed25519.pub`  
+   Cópiala entera.  
+3. En GitHub: **Settings** → **SSH and GPG keys** → **New SSH key** → pega la llave y guarda.  
+4. En el proyecto Flow3-2026, cambiar el remote a SSH (solo una vez):  
+   `git remote set-url origin git@github.com:jherrera-subatop/Flow3-2026.git`  
+   A partir de ahí, `git push origin main` usará la llave y no pedirá contraseña.
+
+Después de configurar **Opción 1** o **Opción 2**, cuando pidas en Cursor **"sube a github"**, el asistente podrá ejecutar el push por ti y no te pedirá la contraseña en el terminal.
+
+---
+
 ## Si algo falla
 
 - **“Git no encontrado” / “git is not recognized”:** instala Git desde [git-scm.com](https://git-scm.com/downloads), reinicia Cursor y repite.

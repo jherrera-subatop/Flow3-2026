@@ -1,4 +1,4 @@
-import React from 'react';
+import type { CSSProperties } from 'react';
 import './FilterBar.css';
 
 export interface FilterBarOption {
@@ -39,7 +39,7 @@ export function FilterBar({
       <div className="filterBarChips">
         {options.map((opt) => {
           const isActive = opt.id === activeId;
-          const style: React.CSSProperties = isActive
+          const style: CSSProperties = isActive
             ? { background: theme.activeBg, color: theme.activeColor }
             : { background: theme.inactiveBg, color: theme.inactiveColor };
           return (

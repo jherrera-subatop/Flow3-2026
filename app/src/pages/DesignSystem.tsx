@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import { specContent, componentOrder, componentCategories } from '../data/specContent';
 import ErrorBoundary from './ErrorBoundary';
 import './DesignSystem.css';

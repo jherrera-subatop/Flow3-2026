@@ -1,8 +1,8 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import './HelpBanner.css';
 
 export interface HelpBannerProps {
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   title: string;
   description: string;
   ctaLabel?: string;

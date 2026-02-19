@@ -1,4 +1,4 @@
-import React from 'react';
+import type { CSSProperties } from 'react';
 import './Sidebar.css';
 
 export interface SidebarNavItem {
@@ -38,7 +38,7 @@ export function Sidebar({
   className = '',
   theme = {},
 }: SidebarProps) {
-  const rootStyle: React.CSSProperties = {
+  const rootStyle: CSSProperties = {
     ...(theme.bg && { background: theme.bg }),
     ...(theme.text && { color: theme.text }),
     ...(theme.itemHover && { ['--sidebar-item-hover' as string]: theme.itemHover }),

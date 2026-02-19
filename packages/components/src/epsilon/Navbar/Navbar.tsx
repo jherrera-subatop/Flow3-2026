@@ -1,14 +1,14 @@
-import React from 'react';
+import type { ReactNode, CSSProperties } from 'react';
 import './Navbar.css';
 
 export interface NavbarProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
   theme?: { bg?: string; border?: string };
 }
 
 export function Navbar({ children, className = '', theme = {} }: NavbarProps) {
-  const style: React.CSSProperties = {
+  const style: CSSProperties = {
     ...(theme.bg && { background: theme.bg }),
     ...(theme.border && { ['--navbar-border' as string]: theme.border }),
   };

@@ -1,4 +1,4 @@
-import React from 'react';
+import type { CSSProperties } from 'react';
 import './Footer.css';
 
 export interface FooterLink {
@@ -32,7 +32,7 @@ export function Footer({
   className = '',
   theme = {},
 }: FooterProps) {
-  const rootStyle: React.CSSProperties = {
+  const rootStyle: CSSProperties = {
     ...(theme.bg && { background: theme.bg }),
     ...(theme.text && { color: theme.text }),
   };

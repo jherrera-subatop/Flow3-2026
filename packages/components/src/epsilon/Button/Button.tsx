@@ -1,8 +1,8 @@
-import React from 'react';
+import type { ReactNode, CSSProperties } from 'react';
 import './Button.css';
 
 export interface ButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   size?: 'lg' | 'md';
   variant?: 'primary' | 'secondary' | 'ghost';
   href?: string;
@@ -27,7 +27,7 @@ export function Button({
   const sizeClass = size === 'lg' ? 'btnLg' : 'btnMd';
   const variantClass = variant === 'primary' ? 'btnPrimary' : variant === 'secondary' ? 'btnSecondary' : 'btnGhost';
   const classNames = `btn ${sizeClass} ${variantClass} ${className}`.trim();
-  const style: React.CSSProperties = {
+  const style: CSSProperties = {
     ...(theme.bg && { background: theme.bg }),
     ...(theme.color && { color: theme.color }),
   };

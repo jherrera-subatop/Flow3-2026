@@ -5,3 +5,4 @@ dist/
 .git-user-and-token
 *.log
 .DS_Store
+.vercel

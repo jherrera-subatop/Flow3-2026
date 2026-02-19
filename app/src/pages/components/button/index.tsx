@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../../../flow-ds/tokens/semantic.css';
 import '../../../flow-ds/tokens/components.css';
 import '../../../flow-ds/tokens/subascars.css';
@@ -76,9 +76,19 @@ function IconPlus() {
   );
 }
 
-export default function ButtonPage() {
-  const [activeTab, setActiveTab] = useState<TabId>('flow3');
+interface ButtonPageProps {
+  defaultTab?: TabId;
+}
+
+export default function ButtonPage({ defaultTab = 'flow3' }: ButtonPageProps) {
+  const location = useLocation();
+  const tabFromUrl = location.pathname.endsWith('/subascars') ? 'subascars' : defaultTab;
+  const [activeTab, setActiveTab] = useState<TabId>(tabFromUrl);
   const [auditExpanded, setAuditExpanded] = useState(true);
+
+  useEffect(() => {
+    if (location.pathname.endsWith('/subascars')) setActiveTab('subascars');
+  }, [location.pathname]);
 
   return (
     <div className={`${styles.layout} ${activeTab === 'subascars' ? styles.layoutSubascars : ''}`}>
@@ -143,7 +153,10 @@ export default function ButtonPage() {
               role="tab"
               aria-selected={activeTab === 'flow3'}
               className={`${styles.tab} ${activeTab === 'flow3' ? styles.tabActive : ''}`}
-              onClick={() => setActiveTab('flow3')}
+              onClick={() => {
+                setActiveTab('flow3');
+                window.history.replaceState(null, '', '/components/button');
+              }}
             >
               FloW3 DS
             </button>
@@ -152,7 +165,10 @@ export default function ButtonPage() {
               role="tab"
               aria-selected={activeTab === 'subascars'}
               className={`${styles.tab} ${activeTab === 'subascars' ? styles.tabActive : ''}`}
-              onClick={() => setActiveTab('subascars')}
+              onClick={() => {
+                setActiveTab('subascars');
+                window.history.replaceState(null, '', '/components/button/subascars');
+              }}
             >
               Subascars
             </button>

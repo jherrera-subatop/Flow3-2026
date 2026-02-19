@@ -3,5 +3,7 @@
   "outputDirectory": "app/dist",
   "installCommand": "npm install",
   "framework": null,
-  "ignoreCommand": null
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }

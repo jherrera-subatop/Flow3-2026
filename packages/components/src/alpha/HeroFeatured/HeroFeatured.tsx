@@ -1,4 +1,3 @@
-import React from 'react';
 import './HeroFeatured.css';
 
 export interface HeroFeaturedProps {

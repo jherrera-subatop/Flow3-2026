@@ -1,0 +1,102 @@
+/* FloW3 DS — Semantic tokens. Fuente de verdad para componentes. */
+
+:root {
+  /* Surfaces */
+  --flow-color-surface: #F3F5FF;
+  --flow-color-surface-raised: #FFFFFF;
+  --flow-color-surface-sunken: #E5E7EB;
+  --flow-color-border: #D5DBF0;
+
+  /* Primary */
+  --flow-color-primary: #0055FF;
+  --flow-color-primary-hover: #0047D9;
+  --flow-color-primary-active: #0039B3;
+  --flow-color-primary-subtle: rgba(0, 85, 255, 0.08);
+  --flow-color-text-on-primary: #FFFFFF;
+
+  /* Secondary */
+  --flow-color-secondary: #00B8A0;
+  --flow-color-secondary-hover: #009B87;
+  --flow-color-secondary-active: #007F6F;
+  --flow-color-secondary-subtle: #E3F8F5;
+
+  /* Danger */
+  --flow-color-danger: #D42E2E;
+  --flow-color-danger-hover: #B32626;
+  --flow-color-danger-active: #921E1E;
+  --flow-color-danger-subtle: #FFF0F0;
+
+  /* States / text */
+  --flow-color-text-default: #0A0D1B;
+  --flow-color-text-muted: #60708A;
+  --flow-color-text-disabled: #9CA3AF;
+  --flow-color-border-focus: #0055FF;
+  --flow-color-border-strong: #B0BCDC;
+
+  /* Espacio Fibonacci (FLOW³ escala oficial) */
+  --flow-space-fib-1: 1px;
+  --flow-space-fib-2: 2px;
+  --flow-space-fib-3: 3px;
+  --flow-space-fib-5: 5px;
+  --flow-space-fib-8: 8px;
+  --flow-space-fib-13: 13px;
+  --flow-space-fib-21: 21px;
+  --flow-space-fib-34: 34px;
+  --flow-space-fib-55: 55px;
+
+  /* Espacio (referencias a Fibonacci donde aplica) */
+  --flow-space-xs: 0.375rem;
+  --flow-space-sm: 0.5rem;
+  --flow-space-md: 0.75rem;
+  --flow-space-lg: 1rem;
+  --flow-space-xl: 1.5rem;
+  --flow-space-2xl: 2rem;
+  --flow-sidebar-width: 240px;
+  --flow-content-max: 960px;
+  --flow-on-this-page-width: 220px;
+
+  /* Radio */
+  --flow-radius-sm: 0.25rem;
+  --flow-radius-md: 0.5rem;
+  --flow-radius-lg: 0.75rem;
+  --flow-radius-pill: 9999px;
+
+  /* Tipografía */
+  --flow-text-sm: 0.875rem;
+  --flow-text-base: 1rem;
+  --flow-text-lg: 1.125rem;
+  --flow-text-xl: 1.25rem;
+  --flow-text-2xl: 1.5rem;
+  --flow-text-3xl: 2.25rem;
+  --flow-text-xs: 0.6875rem;
+  --flow-text-weight-semibold: 600;
+  --flow-text-leading-tight: 1.2;
+  --flow-text-leading-normal: 1.5;
+  --flow-text-font-body: 'DM Sans', system-ui, sans-serif;
+  --flow-text-font-mono: 'DM Mono', ui-monospace, monospace;
+
+  /* Motion */
+  --flow-motion-normal: 200ms;
+  --flow-motion-ease: ease;
+
+  /* Badges / feedback */
+  --flow-color-warning: #F59E0B;
+  --flow-color-warning-strong: #b45309;
+  --flow-color-warning-subtle: #FFF8E6;
+  --flow-color-secondary-active-text: #007f6f;
+
+  /* Sombras / overlays (evitar rgba directos en UI) */
+  --flow-shadow-sm: 0 2px 6px rgba(10, 13, 27, 0.08);
+  --flow-color-code-border: rgba(255, 255, 255, 0.06);
+  --flow-color-code-header: rgba(255, 255, 255, 0.03);
+  --flow-color-code-header-border: rgba(255, 255, 255, 0.06);
+
+  /* Code / neutral para bloques de código */
+  --flow-color-neutral-200: #E5E7EB;
+  --flow-color-neutral-400: #8896BC;
+  --flow-color-neutral-900: #111827;
+  --flow-code-keyword: #FF7B72;
+  --flow-code-property: #79C0FF;
+  --flow-code-value: #A5D6FF;
+  --flow-code-token: #7EE787;
+}

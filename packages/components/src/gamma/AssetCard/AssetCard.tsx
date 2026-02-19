@@ -1,4 +1,3 @@
-import React from 'react';
 import './AssetCard.css';
 
 export interface AssetCardProps {

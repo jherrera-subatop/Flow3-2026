@@ -1,0 +1,30 @@
+/* FLOW³ — Component tokens. Referencian SOLO semantic.css.
+   Anatomía de componentes UI. */
+
+@import './semantic.css';
+
+:root {
+  /* Button — Figma node 14-221, ajustes Fibonacci */
+  --flow-btn-bg:           var(--flow-color-brand);
+  --flow-btn-bg-hover:     var(--flow-color-brand-hover);
+  --flow-btn-bg-active:    var(--flow-color-brand-active);
+  --flow-btn-text:         var(--flow-color-text-on-primary);
+  --flow-btn-bg-disabled:  var(--flow-color-surface-sunken);
+  --flow-btn-text-disabled: var(--flow-color-text-disabled);
+  --flow-btn-height-m:     var(--flow-fib-34);
+  --flow-btn-padding-y-m:  var(--flow-fib-8);
+  --flow-btn-padding-x-m:  var(--flow-fib-13);
+  --flow-btn-font-size-m:  var(--flow-fib-21);
+  --flow-btn-font-weight:  var(--flow-text-weight-medium);
+  --flow-btn-font-family:  var(--flow-text-font-body);
+  --flow-btn-radius:       var(--flow-radius-pill);
+  --flow-btn-shadow:       var(--flow-shadow-sm);
+  --flow-btn-border:       none;
+  --flow-btn-duration:     var(--flow-motion-normal);
+  --flow-btn-ease:         var(--flow-motion-ease);
+  --flow-btn-focus-ring:   var(--flow-color-border-focus);
+
+  /* Legacy aliases (padding/radius para compatibilidad) */
+  --flow-btn-padding-y:    var(--flow-btn-padding-y-m);
+  --flow-btn-padding-x:    var(--flow-btn-padding-x-m);
+}

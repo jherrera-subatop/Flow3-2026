@@ -1,0 +1,90 @@
+/* FloW3 DS — Button. Solo var(--flow-btn-*). Variantes solo color. Sizes Fibonacci. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--flow-space-fib-8);
+  height: var(--flow-btn-height-m);
+  background-color: var(--flow-btn-bg);
+  color: var(--flow-btn-text);
+  padding: var(--flow-btn-padding-y) var(--flow-btn-padding-x);
+  border-radius: var(--flow-btn-radius);
+  font-size: var(--flow-btn-font-size);
+  font-weight: var(--flow-btn-font-weight);
+  font-family: var(--flow-btn-font-family);
+  border: var(--flow-btn-border-width) solid transparent;
+  box-shadow: none;
+  transition: background-color var(--flow-btn-duration) var(--flow-btn-ease),
+    border-color var(--flow-btn-duration) var(--flow-btn-ease);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--flow-btn-bg-hover);
+}
+
+.button:active {
+  background-color: var(--flow-btn-bg-active);
+}
+
+.button:focus-visible {
+  outline: var(--flow-btn-focus-width) solid var(--flow-btn-focus-ring);
+  outline-offset: var(--flow-btn-focus-offset);
+}
+
+.button:disabled,
+.button--disabled {
+  background-color: var(--flow-btn-bg-disabled);
+  color: var(--flow-btn-text-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.buttonIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Variantes: solo tokens de color */
+.button--secondary {
+  --flow-btn-bg:       var(--flow-btn-secondary-bg);
+  --flow-btn-bg-hover: var(--flow-btn-secondary-bg-hover);
+  --flow-btn-bg-active: var(--flow-btn-secondary-bg-active);
+  --flow-btn-text:     var(--flow-color-text-on-primary);
+}
+
+.button--destructive {
+  --flow-btn-bg:       var(--flow-btn-danger-bg);
+  --flow-btn-bg-hover: var(--flow-btn-danger-bg-hover);
+  --flow-btn-bg-active: var(--flow-btn-danger-bg-active);
+  --flow-btn-text:     var(--flow-color-text-on-primary);
+}
+
+.button--ghost {
+  --flow-btn-bg:       transparent;
+  --flow-btn-bg-hover: var(--flow-btn-ghost-bg-hover);
+  --flow-btn-bg-active: var(--flow-btn-ghost-bg-hover);
+  --flow-btn-text:     var(--flow-btn-ghost-text);
+  border-width: var(--flow-btn-focus-width);
+  border-color: var(--flow-btn-ghost-border);
+}
+
+.button--ghost:hover {
+  border-color: var(--flow-btn-ghost-text);
+}
+
+/* Sizes (Fibonacci: L=55px, M=34px, S=21px). Default = M. */
+.button--l {
+  height: var(--flow-btn-height-l);
+  --flow-btn-padding-y: var(--flow-btn-padding-y-l);
+  --flow-btn-padding-x: var(--flow-btn-padding-x-l);
+  --flow-btn-font-size: var(--flow-btn-font-size-l);
+}
+
+.button--s {
+  height: var(--flow-btn-height-s);
+  --flow-btn-padding-y: var(--flow-btn-padding-y-s);
+  --flow-btn-padding-x: var(--flow-btn-padding-x-s);
+  --flow-btn-font-size: var(--flow-btn-font-size-s);
+}

@@ -14,7 +14,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@flow3/button": ["../src/components/Button/Button.tsx"],
+      "@flow3/tokens/*": ["../src/tokens/*"]
+    }
   },
   "include": ["src"]
 }

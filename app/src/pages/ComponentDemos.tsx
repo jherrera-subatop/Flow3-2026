@@ -2,7 +2,6 @@
  * Live demos for the Design System page.
  * Loaded separately so the docs page still renders if this fails.
  */
-import React from 'react';
 import {
   HeroFeatured,
   AssetCard,
@@ -84,7 +83,7 @@ export default function ComponentDemos({ selectedId }: ComponentDemosProps) {
           ]}
           supportLabel="SOPORTE"
           supportItems={[{ label: 'Centro de ayuda', href: '#' }]}
-          theme={VMC_THEME}
+          theme={{ bg: VMC_THEME.sidebarBg, text: VMC_THEME.sidebarText, muted: VMC_THEME.sidebarMuted, itemHover: VMC_THEME.sidebarItemHover }}
         />
       );
     case 'button':

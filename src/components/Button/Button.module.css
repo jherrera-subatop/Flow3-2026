@@ -1,0 +1,41 @@
+/* FLOW³ — Button. Solo var(--flow-btn-*). Sin valores directos. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--flow-fib-8);
+  height: var(--flow-btn-height-m);
+  padding: var(--flow-btn-padding-y-m) var(--flow-btn-padding-x-m);
+  background: var(--flow-btn-bg);
+  color: var(--flow-btn-text);
+  border-radius: var(--flow-btn-radius);
+  font-size: var(--flow-btn-font-size-m);
+  font-weight: var(--flow-btn-font-weight);
+  font-family: var(--flow-btn-font-family);
+  box-shadow: var(--flow-btn-shadow);
+  border: var(--flow-btn-border);
+  cursor: pointer;
+  transition: background var(--flow-btn-duration) var(--flow-btn-ease);
+}
+
+.button:hover {
+  background: var(--flow-btn-bg-hover);
+}
+
+.button:active {
+  background: var(--flow-btn-bg-active);
+}
+
+.button:focus-visible {
+  outline: var(--flow-fib-2) solid var(--flow-btn-focus-ring);
+  outline-offset: var(--flow-fib-2);
+}
+
+.button:disabled,
+.button--disabled {
+  background: var(--flow-btn-bg-disabled);
+  color: var(--flow-btn-text-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}

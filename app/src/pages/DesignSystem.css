@@ -531,3 +531,17 @@
   padding-top: var(--flow-space-xl);
   border-top: var(--flow-fib-3) solid rgba(255,255,255,0.08);
 }
+
+/* FloW DS Button demo (sobre fondo blanco del canvas) */
+.flowButtonDemo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-space-lg);
+  align-items: flex-start;
+}
+
+.flowButtonDemoRow {
+  display: flex;
+  align-items: center;
+  gap: var(--flow-space-md);
+}

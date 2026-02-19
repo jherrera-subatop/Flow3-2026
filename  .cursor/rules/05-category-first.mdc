@@ -1,0 +1,48 @@
+---
+description: Category-first structure for component documentation and Design System pages
+alwaysApply: true
+---
+
+# Category First — Regla de estructura
+
+**Cada componente está bajo el concepto category first.** Siempre se parte desde categoría y luego se ven variantes.
+
+## Regla principal
+
+1. **Categoría primero** → Después componente → Después variantes
+2. La documentación y las páginas del Design System siguen esta línea siempre
+3. Estructura de secciones: Default (base de la categoría) → Anatomía → Variantes → Estados → Token Map → Código → Auditoría
+
+## Estructura obligatoria (igual que Button)
+
+| Sección    | Enfoque                                                                 |
+|-----------|--------------------------------------------------------------------------|
+| Default   | La base de la categoría; la referencia de la que derivan variantes      |
+| Anatomía  | En la categoría X, cómo está construido el componente; anatomía inmutable |
+| Variantes | Dentro de la categoría X, las variantes del componente; anatomía idéntica |
+| Estados   | Estados de interacción derivados del default de la categoría            |
+| Token Map | Tokens de componente para [componente] en la categoría X                |
+| Código    | Implementación usando tokens de la categoría                            |
+| Auditoría | Origen Figma, cumplimiento FLOW³                                        |
+
+## Ejemplos por categoría
+
+- **Actions** → Button (Default, Anatomía, Variantes: primary, secondary, destructive, ghost)
+- **Forms** → Input, Select, Checkbox, Toggle
+
+## Cómo escribir el copy
+
+- ✅ "Desde la categoría **Display**: el default de Card es..."
+- ✅ "Dentro de la categoría Display, las variantes de Card: Asset card..."
+- ✅ "Igual que Button — categoría primero, luego variantes"
+- ❌ "La card por defecto de Subascars" (sin enfatizar categoría)
+- ❌ Empezar por variantes o por el componente sin contexto de categoría
+
+## Breadcrumb y navegación
+
+```
+Components › [Categoría] › [Componente]
+           ↑ primero     ↑ segundo
+```
+
+Ejemplo: Components › Actions › Button

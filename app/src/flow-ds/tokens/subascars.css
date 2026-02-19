@@ -1,0 +1,103 @@
+/* Flow3 Subascars — Tokens derivados de Figma (Prueba Cursor, node 14-221).
+   Auditoría: botón "Text button" con gradiente, pill, sombra. */
+
+:root {
+  /* Subascars — Colores del botón (Figma) */
+  --subascars-btn-gradient-start: #E000FF;
+  --subascars-btn-gradient-end: #1a00c7;
+  --subascars-btn-gradient: linear-gradient(
+    90deg,
+    var(--subascars-btn-gradient-start) 0%,
+    var(--subascars-btn-gradient-end) 100%
+  );
+  --subascars-btn-text: var(--subascars-text-neutral-inverse, #fafafc);
+
+  /* Tipografía — Figma Body/Large Medium */
+  --subascars-text-font-body: 'Roboto', system-ui, sans-serif;
+  --subascars-text-size-lg: 17px;
+  --subascars-text-weight-medium: 500;
+  --subascars-text-line-height: 1.23;
+  --subascars-text-letter-spacing: 0.008em;
+
+  /* Espacio — Figma Spacer/5, 10, 15 */
+  --subascars-space-5: 5px;
+  --subascars-space-10: 10px;
+  --subascars-space-15: 15px;
+
+  /* Radio — Figma Corner radius/Full (pill) */
+  --subascars-radius-full: 9999px;
+
+  /* Sombra — Figma Shadow Levels/Drop/Light Surfaces/Medium 08 */
+  --subascars-shadow-drop-medium: 0 5px 13px rgba(0, 9, 87, 0.21);
+  --subascars-shadow-drop-hover: 0 6px 16px rgba(0, 9, 87, 0.25);
+  --subascars-shadow-drop-active: 0 2px 8px rgba(0, 9, 87, 0.18);
+
+  /* Critical / destructive (Polaris-style) */
+  --subascars-color-critical: #d82c0d;
+  --subascars-color-critical-hover: #b3240b;
+  --subascars-color-critical-text: #fafafc;
+
+  /* Tokens de componente Button Subascars (capa componente) */
+  --subascars-btn-bg: var(--subascars-btn-gradient);
+  --subascars-btn-color: var(--subascars-btn-text);
+  --subascars-btn-border: none;
+  --subascars-btn-shadow: var(--subascars-shadow-drop-medium);
+  --subascars-btn-padding-y: var(--subascars-space-10);
+  --subascars-btn-padding-x: var(--subascars-space-15);
+  --subascars-btn-radius: var(--subascars-radius-full);
+  --subascars-btn-font-family: var(--subascars-text-font-body);
+  --subascars-btn-font-size: var(--subascars-text-size-lg);
+  --subascars-btn-font-weight: var(--subascars-text-weight-medium);
+  --subascars-btn-line-height: var(--subascars-text-line-height);
+  --subascars-btn-letter-spacing: var(--subascars-text-letter-spacing);
+
+  /* Variant: plain — hover (evitar rgba directo en componente) */
+  --subascars-btn-plain-bg-hover: rgba(224, 0, 255, 0.06);
+  --subascars-btn-tertiary-bg-hover: rgba(26, 0, 199, 0.06);
+
+  /* Variant: plain (secundario, bajo peso visual) */
+  --subascars-btn-plain-bg: transparent;
+  --subascars-btn-plain-color: var(--subascars-btn-gradient-start);
+  --subascars-btn-plain-border: 1.5px solid var(--subascars-btn-gradient-end);
+  --subascars-btn-plain-shadow: none;
+
+  /* Variant: tertiary (solo texto) */
+  --subascars-btn-tertiary-bg: transparent;
+  --subascars-btn-tertiary-color: var(--subascars-btn-gradient-end);
+  --subascars-btn-tertiary-border: none;
+  --subascars-btn-tertiary-shadow: none;
+
+  /* Variant: critical */
+  --subascars-btn-critical-bg: var(--subascars-color-critical);
+  --subascars-btn-critical-color: var(--subascars-color-critical-text);
+  --subascars-btn-critical-border: none;
+  --subascars-btn-critical-shadow: var(--subascars-shadow-drop-medium);
+
+  /* Sizes */
+  --subascars-btn-slim-padding-y: var(--subascars-space-5);
+  --subascars-btn-slim-padding-x: var(--subascars-space-10);
+  --subascars-btn-slim-font-size: 15px;
+  --subascars-btn-large-padding-y: var(--subascars-space-15);
+  --subascars-btn-large-padding-x: 24px;
+  --subascars-btn-large-font-size: 19px;
+
+  /* Página / tema Subascars (evitar rgba directos en UI) */
+  --subascars-page-item-hover: rgba(224, 0, 255, 0.06);
+  --subascars-page-accent-subtle: rgba(224, 0, 255, 0.1);
+  --subascars-page-accent-subtle-alt: rgba(0, 184, 160, 0.15);
+  --subascars-page-accent-subtle-warning: rgba(245, 158, 11, 0.15);
+  --subascars-page-code-border: rgba(26, 0, 199, 0.2);
+  --subascars-page-code-header: rgba(26, 0, 199, 0.08);
+  --subascars-page-code-header-border: rgba(26, 0, 199, 0.15);
+
+  /* Página / tema Subascars (colores base) */
+  --subascars-page-bg: #f8f5fc;
+  --subascars-page-surface: #ffffff;
+  --subascars-page-border: rgba(26, 0, 199, 0.12);
+  --subascars-page-text: #1a0d2e;
+  --subascars-page-text-muted: #5c4d6b;
+  --subascars-page-accent: var(--subascars-btn-gradient-start);
+  --subascars-page-accent-end: var(--subascars-btn-gradient-end);
+  --subascars-page-radius: 12px;
+  --subascars-page-shadow: 0 4px 12px rgba(26, 0, 199, 0.08);
+}

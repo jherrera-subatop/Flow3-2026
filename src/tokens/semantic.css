@@ -1,0 +1,41 @@
+/* FLOW³ — Semantic tokens. Referencian SOLO primitives.css.
+   Colores contextuales, espacio, tipografía, motion, radius, shadow. */
+
+@import './primitives.css';
+
+:root {
+  /* Brand gradient (Figma 14-221) */
+  --flow-color-brand: linear-gradient(90deg, var(--flow-purple-500), var(--flow-indigo-700));
+  --flow-color-brand-hover: linear-gradient(90deg, var(--flow-purple-600), var(--flow-indigo-800));
+  --flow-color-brand-active: linear-gradient(90deg, var(--flow-purple-700), var(--flow-indigo-900));
+
+  /* Colores base */
+  --flow-color-primary: #2563eb;
+  --flow-color-primary-hover: #1d4ed8;
+  --flow-color-primary-active: #1e40af;
+  --flow-color-text-on-primary: var(--flow-neutral-0);
+  --flow-color-surface-sunken: #e5e7eb;
+  --flow-color-text-disabled: #9ca3af;
+  --flow-color-border-focus: var(--flow-purple-500);
+
+  /* Espacio (Fibonacci) */
+  --flow-space-sm: var(--flow-fib-8);
+  --flow-space-md: var(--flow-fib-13);
+
+  /* Radio */
+  --flow-radius-md: var(--flow-fib-8);
+  --flow-radius-pill: 9999px;
+
+  /* Tipografía */
+  --flow-text-base: 1rem;
+  --flow-text-weight-semibold: 600;
+  --flow-text-weight-medium: 500;
+  --flow-text-font-body: system-ui, -apple-system, sans-serif;
+
+  /* Motion */
+  --flow-motion-normal: 150ms;
+  --flow-motion-ease: ease;
+
+  /* Shadow (Fibonacci 5, 13) */
+  --flow-shadow-sm: 0 var(--flow-fib-5) var(--flow-fib-13) var(--flow-color-shadow-drop);
+}

@@ -1,0 +1,124 @@
+/* Flow3 Subascars — Button. Solo var(--subascars-btn-*). Anatomía idéntica; variantes solo sobreescriben color/borde/sombra. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--subascars-space-5);
+  padding: var(--subascars-btn-padding-y) var(--subascars-btn-padding-x);
+  border-radius: var(--subascars-btn-radius);
+  font-family: var(--subascars-btn-font-family);
+  font-size: var(--subascars-btn-font-size);
+  font-weight: var(--subascars-btn-font-weight);
+  line-height: var(--subascars-btn-line-height);
+  letter-spacing: var(--subascars-btn-letter-spacing);
+  color: var(--subascars-btn-color);
+  background: var(--subascars-btn-bg);
+  border: var(--subascars-btn-border);
+  box-shadow: var(--subascars-btn-shadow);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.1s ease, background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.button--plain {
+  --subascars-btn-bg: var(--subascars-btn-plain-bg);
+  --subascars-btn-color: var(--subascars-btn-plain-color);
+  --subascars-btn-border: var(--subascars-btn-plain-border);
+  --subascars-btn-shadow: var(--subascars-btn-plain-shadow);
+}
+
+.button--plain:hover {
+  box-shadow: none;
+  background: var(--subascars-btn-plain-bg-hover);
+}
+
+.button--tertiary {
+  --subascars-btn-bg: var(--subascars-btn-tertiary-bg);
+  --subascars-btn-color: var(--subascars-btn-tertiary-color);
+  --subascars-btn-border: var(--subascars-btn-tertiary-border);
+  --subascars-btn-shadow: var(--subascars-btn-tertiary-shadow);
+}
+
+.button--tertiary:hover {
+  box-shadow: none;
+  background: var(--subascars-btn-tertiary-bg-hover);
+}
+
+.button--critical {
+  --subascars-btn-bg: var(--subascars-btn-critical-bg);
+  --subascars-btn-color: var(--subascars-btn-critical-color);
+  --subascars-btn-border: var(--subascars-btn-critical-border);
+  --subascars-btn-shadow: var(--subascars-btn-critical-shadow);
+}
+
+.button--critical:hover {
+  background: var(--subascars-color-critical-hover);
+}
+
+.button--slim {
+  --subascars-btn-padding-y: var(--subascars-btn-slim-padding-y);
+  --subascars-btn-padding-x: var(--subascars-btn-slim-padding-x);
+  --subascars-btn-font-size: var(--subascars-btn-slim-font-size);
+}
+
+.button--large {
+  --subascars-btn-padding-y: var(--subascars-btn-large-padding-y);
+  --subascars-btn-padding-x: var(--subascars-btn-large-padding-x);
+  --subascars-btn-font-size: var(--subascars-btn-large-font-size);
+}
+
+.buttonFullWidth {
+  width: 100%;
+}
+
+.buttonLoading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.buttonLoading::after {
+  content: '';
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: subascars-spin 0.6s linear infinite;
+  color: var(--subascars-btn-color);
+}
+
+@keyframes subascars-spin {
+  to { transform: rotate(360deg); }
+}
+
+.button:hover {
+  box-shadow: var(--subascars-shadow-drop-hover);
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: var(--subascars-shadow-drop-active);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--subascars-btn-gradient-end);
+  outline-offset: 2px;
+}
+
+.button:disabled,
+.buttonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.buttonIcon {
+  display: inline-flex;
+  align-items: center;
+}

@@ -1,0 +1,50 @@
+/* FloW3 DS — Component tokens. Referencian SOLO semantic. Anatomía + Sizes (Fibonacci). */
+
+:root {
+  /* Button — anatomía (inmutable entre variantes) */
+  --flow-btn-bg:               var(--flow-color-primary);
+  --flow-btn-bg-hover:         var(--flow-color-primary-hover);
+  --flow-btn-bg-active:        var(--flow-color-primary-active);
+  --flow-btn-text:             var(--flow-color-text-on-primary);
+  --flow-btn-bg-disabled:      var(--flow-color-surface-sunken);
+  --flow-btn-text-disabled:    var(--flow-color-text-disabled);
+  --flow-btn-padding-y:        var(--flow-space-fib-8);
+  --flow-btn-padding-x:        var(--flow-space-fib-13);
+  --flow-btn-radius:           var(--flow-radius-md);
+  --flow-btn-font-size:        var(--flow-text-base);
+  --flow-btn-font-weight:      var(--flow-text-weight-semibold);
+  --flow-btn-font-family:      var(--flow-text-font-body);
+  --flow-btn-duration:         var(--flow-motion-normal);
+  --flow-btn-ease:             var(--flow-motion-ease);
+  --flow-btn-focus-ring:       var(--flow-color-border-focus);
+  --flow-btn-focus-width:      var(--flow-space-fib-2);
+  --flow-btn-focus-offset:     var(--flow-space-fib-2);
+  --flow-btn-border-width:     var(--flow-space-fib-1);
+
+  /* Button — Ghost (evitar WRONG-LAYER) */
+  --flow-btn-ghost-border:     var(--flow-color-border);
+  --flow-btn-ghost-bg-hover:   var(--flow-color-primary-subtle);
+  --flow-btn-ghost-text:       var(--flow-color-primary);
+
+  /* Button — variantes */
+  --flow-btn-secondary-bg:        var(--flow-color-secondary);
+  --flow-btn-secondary-bg-hover:  var(--flow-color-secondary-hover);
+  --flow-btn-secondary-bg-active: var(--flow-color-secondary-active);
+  --flow-btn-danger-bg:           var(--flow-color-danger);
+  --flow-btn-danger-bg-hover:     var(--flow-color-danger-hover);
+  --flow-btn-danger-bg-active:    var(--flow-color-danger-active);
+
+  /* Button — Sizes (alturas Fibonacci: L=55, M=34, S=21) */
+  --flow-btn-height-l:        var(--flow-space-fib-55);
+  --flow-btn-height-m:        var(--flow-space-fib-34);
+  --flow-btn-height-s:        var(--flow-space-fib-21);
+  --flow-btn-padding-y-l:     var(--flow-space-fib-13);
+  --flow-btn-padding-x-l:     var(--flow-space-fib-21);
+  --flow-btn-padding-y-m:     var(--flow-space-fib-8);
+  --flow-btn-padding-x-m:     var(--flow-space-fib-13);
+  --flow-btn-padding-y-s:     var(--flow-space-fib-3);
+  --flow-btn-padding-x-s:     var(--flow-space-fib-8);
+  --flow-btn-font-size-l:     var(--flow-text-lg);
+  --flow-btn-font-size-m:     var(--flow-text-base);
+  --flow-btn-font-size-s:     var(--flow-text-sm);
+}

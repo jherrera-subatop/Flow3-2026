@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import DesignSystem from './pages/DesignSystem';
+import ButtonPage from './pages/components/button';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -11,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/design-system" element={<DesignSystem />} />
+        <Route path="/components/button" element={<ButtonPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

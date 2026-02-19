@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
 import { specContent, componentOrder, componentCategories } from '../data/specContent';
 import ErrorBoundary from './ErrorBoundary';
 import './DesignSystem.css';
 
 const ComponentDemos = lazy(() => import('./ComponentDemos'));
+const FloWButtonDemo = lazy(() => import('./FloWButtonDemo'));
 
 function DemoFallback() {
   return (
@@ -33,7 +33,7 @@ function NavButton({
 export default function DesignSystem() {
   const [selectedId, setSelectedId] = useState<string>(() => {
     const hash = window.location.hash.slice(1);
-    if (hash === 'overview' || hash === 'intro' || hash === 'shadows') return hash;
+    if (hash === 'overview' || hash === 'intro' || hash === 'shadows' || hash === 'flow-button') return hash;
     return hash && specContent[hash] ? hash : 'overview';
   });
   const [docsOpen, setDocsOpen] = useState(false);
@@ -41,7 +41,7 @@ export default function DesignSystem() {
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.slice(1);
-      if (hash === 'overview' || hash === 'intro' || hash === 'shadows') setSelectedId(hash);
+      if (hash === 'overview' || hash === 'intro' || hash === 'shadows' || hash === 'flow-button') setSelectedId(hash);
       else if (hash && specContent[hash]) setSelectedId(hash);
       else if (!hash) setSelectedId('overview');
     };
@@ -70,6 +70,12 @@ export default function DesignSystem() {
           </NavButton>
           <NavButton active={selectedId === 'shadows'} onClick={() => setSelectedId('shadows')}>
             🌑 Sombras (Shadow Physics)
+          </NavButton>
+          <div className="dsNavTitle" style={{ marginTop: 'var(--flow-space-lg)' }}>
+            FloW DS
+          </div>
+          <NavButton active={selectedId === 'flow-button'} onClick={() => setSelectedId('flow-button')}>
+            Button (categoría base)
           </NavButton>
           <div className="dsNavTitle" style={{ marginTop: 'var(--flow-space-lg)' }}>
             Por Kit
@@ -123,6 +129,31 @@ export default function DesignSystem() {
                   </button>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* FloW DS — Button (categoría base) */}
+        {selectedId === 'flow-button' && (
+          <div className="dsComponentView">
+            <div className="dsCanvasWrap">
+              <div className="dsCanvasLabel">
+                <span className="dsCanvasName">FloW DS — Button</span>
+                <span className="dsKitBadge">Categoría base</span>
+              </div>
+              <div className="dsCanvas">
+                <ErrorBoundary fallback={<div className="dsCanvasFallback">Error al cargar FloW Button.</div>}>
+                  <Suspense fallback={<div className="dsCanvasFallback">Cargando…</div>}>
+                    <FloWButtonDemo />
+                  </Suspense>
+                </ErrorBoundary>
+              </div>
+            </div>
+            <div className="dsDocsSection">
+              <p className="dsSpecParagraph">
+                Anatomía inmutable: espaciado, tipografía, radio, transición y estados (hover, active, focus-visible, disabled). 
+                Tokens en <code>components.css</code> (<code>--flow-btn-*</code>). Sin variantes de color todavía.
+              </p>
             </div>
           </div>
         )}

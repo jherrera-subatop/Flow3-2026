@@ -72,7 +72,13 @@ export default function ComponentDemos({ selectedId }: ComponentDemosProps) {
           theme={VMC_THEME}
         />
       );
-    case 'sidebar':
+    case 'sidebar': {
+      const sidebarTheme = {
+        bg: VMC_THEME.sidebarBg,
+        text: VMC_THEME.sidebarText,
+        muted: VMC_THEME.sidebarMuted,
+        itemHover: VMC_THEME.sidebarItemHover,
+      };
       return (
         <Sidebar
           logoTitle="VMC SUBASTAS"
@@ -83,9 +89,10 @@ export default function ComponentDemos({ selectedId }: ComponentDemosProps) {
           ]}
           supportLabel="SOPORTE"
           supportItems={[{ label: 'Centro de ayuda', href: '#' }]}
-          theme={{ bg: VMC_THEME.sidebarBg, text: VMC_THEME.sidebarText, muted: VMC_THEME.sidebarMuted, itemHover: VMC_THEME.sidebarItemHover }}
+          theme={sidebarTheme}
         />
       );
+    }
     case 'button':
       return (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--flow-space-md)' }}>

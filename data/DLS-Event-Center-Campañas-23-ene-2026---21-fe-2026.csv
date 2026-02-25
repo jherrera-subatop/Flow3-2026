@@ -1,0 +1,5 @@
+"Inicio del informe","Fin del informe","Nombre de la campaña","Entrega de la campaña",Resultados,"Indicador de resultado","Costo por resultados","Presupuesto del conjunto de anuncios","Tipo de presupuesto del conjunto de anuncios","Importe gastado (USD)",Impresiones,Alcance,Finalización,"Configuración de atribución"
+2026-01-23,2026-02-21,"Campaña Whatsapp Promoción DLS",inactive,13,actions:onsite_conversion.messaging_conversation_started_7d,4.06,10,Diario,52.78,4291,1915,"En curso","7 días tras clic o 1 día tras visualización"
+2026-01-23,2026-02-21,"2da Campaña Messenger Promoción DLS",active,146,actions:onsite_conversion.messaging_conversation_started_7d,2.65020548,15,Diario,386.93,25901,7873,"En curso","7 días tras clic o 1 día tras visualización"
+2026-01-23,2026-02-21,"Campaña DLS Octubre",active,57,actions:onsite_conversion.messaging_conversation_started_7d,2.80719298,"Con el presupuesto del conjunto de anuncios",0,160.01,14938,6766,"En curso","7 días tras clic o 1 día tras visualización"
+2026-01-23,2026-02-21,"Campaña DLS  Octubre",inactive,,,,20,Diario,11.86,867,696,"En curso","7 días tras clic o 1 día tras visualización"

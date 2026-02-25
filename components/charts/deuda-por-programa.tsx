@@ -69,7 +69,7 @@ export function DeudaPorPrograma({ deudores }: DeudaPorProgramaProps) {
           <Tooltip
             contentStyle={{ backgroundColor: c.tooltipBg, border: `1px solid ${c.tooltipBorder}`, borderRadius: "8px" }}
             labelStyle={{ color: c.tooltipLabel }}
-            formatter={(value: number) => [formatCurrency(value), "Deuda"]}
+            formatter={(value) => [formatCurrency(Number(value ?? 0)), "Deuda"]}
           />
           <Bar dataKey="Deuda" fill="#EF4444" radius={[0, 4, 4, 0]} />
         </BarChart>

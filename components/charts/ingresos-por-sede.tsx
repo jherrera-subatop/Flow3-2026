@@ -48,7 +48,7 @@ export function IngresosPorSede({ data }: IngresosPorSedeProps) {
           <Tooltip
             contentStyle={{ backgroundColor: c.tooltipBg, border: `1px solid ${c.tooltipBorder}`, borderRadius: "8px" }}
             labelStyle={{ color: c.tooltipLabel }}
-            formatter={(value: number) => [formatCurrency(value), "Ingresos"]}
+            formatter={(value) => [formatCurrency(Number(value ?? 0)), "Ingresos"]}
           />
           <Bar dataKey="Ingresos" fill="#7C3AED" radius={[4, 4, 0, 0]} />
         </BarChart>

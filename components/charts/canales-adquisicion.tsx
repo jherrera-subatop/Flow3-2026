@@ -61,7 +61,7 @@ export function CanalesAdquisicion({ data }: CanalesAdquisicionProps) {
             </Pie>
             <Tooltip
               contentStyle={{ backgroundColor: c.tooltipBg, border: `1px solid ${c.tooltipBorder}`, borderRadius: "8px" }}
-              formatter={(value: number) => [formatNumber(value), "Clientes"]}
+              formatter={(value) => [formatNumber(Number(value ?? 0)), "Clientes"]}
             />
           </PieChart>
         </ResponsiveContainer>
